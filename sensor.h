@@ -4,13 +4,12 @@
 
 class Sensor{
 private:
-    const double presision = 1;
+    const double precision = .1;
     double xAngle = 0.0;
     double yAngle = 0.0;
     int id;
 public:
 
-    Sensor(const Sensor &p2) {id = p2.id;} 
     Sensor(const int &name): id(name){
 
     }
@@ -24,5 +23,8 @@ public:
         xAngle = x;
         yAngle = y;
     }
+	const double getPrecision() {
+		return precision;
+	}
 };
 #endif

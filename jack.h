@@ -1,39 +1,65 @@
 #ifndef JACK_H
 #define JACK_H
 #include "sensor.h"
+#include <vector>
+using std::vector;
+#include <memory>
+using std::shared_ptr;
+using std::make_shared;
 //ScrewJack motorized
 
 class Jack{
 private:
-    const int maxHeigh = 100;
+    const int maxHeight = 100;
     const int minHeight = 10;
-    double stepSize;
+    const double stepSize = .5;
     double height;
-    const int bCanStep();
-    Sensor *sense;
+    const bool bCanStep(const bool &direction);
+	shared_ptr<Sensor> sense;
     vector<shared_ptr<Jack>> adjacencent;
-    static int ID;
-    const int currentID;
+    static long ID;
+    const long currentID;
+	bool isGood = true;
 public:
-    Jack(const double &step,const double &h):stepSize(step),height(h),currentID(ID++) {
+	const bool isAdjacent(shared_ptr<Jack> jack) {
+		for (auto i : adjacencent) {
+			if (i == jack) {
+				return true;
+			}
+		}
+		return false;
+	}
+    Jack(const double &h):height(h),currentID(ID++) {
 
     };
-    Sensor getSensor(){
-        return *(sense);
+	shared_ptr<Sensor> getSensor(){
+        return sense;
     }
     void makeSensor(const int &id){
-        sense = new Sensor(id);
+		sense = make_shared<Sensor>(id);
     }
-    const bool stepHeight(const int &h);
+	const bool raise();
+	const bool lower();
     const bool bIsGood();
     const bool addAdjJack(shared_ptr<Jack> jack);
     const bool removeAdjJack(shared_ptr<Jack> jack);
     const vector<shared_ptr<Jack>> getList(){
         return adjacencent;
     }
+	const double getStepsize() {
+		return stepSize;
+	};
     const int getID(){
         return currentID;
     };
-
+	friend static bool operator== (const Jack &a, const Jack &b);
 };
+long Jack::ID = 0;
+static bool operator== (const Jack &a, const Jack &b) {
+	if (a.currentID == b.currentID) {
+		return true;
+	}
+	return false;
+};
+
 #endif
