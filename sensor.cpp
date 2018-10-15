@@ -5,12 +5,18 @@
 using std::string;
 #include <cstdlib>
 using std::strtod;
+#include <cmath>
+using std::asin;
+
 #include "sensor.h"
+
 
 const double Sensor::getXAngle(){
     if(!port->IsConnected()){
         return 0;
     }
+    port->WriteData("1"+id,10);
+    
     char incomingData[256] = "";			// don't forget to pre-allocate memory
 
     int dataLength = 255;
@@ -20,10 +26,11 @@ const double Sensor::getXAngle(){
 
     incomingData[readResult] = 0;
     string str(incomingData);
-    xAngle = arcsin((stod(str)-offset)/sensitivity);
+    xAngle = asin((stod(str)-offset)/sensitivity);
     return xAngle;
 };
 const double Sensor::getYAngle(){
+    port->WriteData("2"+ id,10);
     if(!port->IsConnected()){
         return 0;
     }
@@ -36,7 +43,7 @@ const double Sensor::getYAngle(){
 
     incomingData[readResult] = 0;
     string str(incomingData);
-    yAngle = arcsin((stod(str)-offset)/sensitivity);
+    yAngle = asin((stod(str)-offset)/sensitivity);
     return yAngle;
 };
 void Sensor::setAngles(const double &x,const double &y){

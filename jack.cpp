@@ -2,6 +2,10 @@
 
 const bool Jack::raise() {
 	if (bCanStep(true)) {
+	    if(!port->IsConnected()){
+	        return false;
+	    }
+	    port->WriteData("3" + ID,10);
 		height += stepSize;
 		return true;
 	}
@@ -10,8 +14,12 @@ const bool Jack::raise() {
 const bool Jack::lower()
 {
 	if (bCanStep(false)) {
-		height -= stepSize;
-		return true;
+        if(!port->IsConnected()){
+            return false;
+        }
+        port->WriteData("4" + ID,10);
+        height += stepSize;
+        return true;
 	}
 	return false;
 }
@@ -34,6 +42,12 @@ const bool Jack::bCanStep(const bool &direction) {
 };
 const bool Jack::bIsGood()
 {
+    if(!port->IsConnected()){
+        return false;
+    }
+    port->WriteData("5" + ID,10);
+    height += stepSize;
+    return true;
 	return isGood;
 };
 const bool Jack::addAdjJack(shared_ptr<Jack> jack)

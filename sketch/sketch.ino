@@ -1,5 +1,6 @@
 #define BAUD 9600
-char receivedChar;
+char receivedOptionChar;
+char recievedParaChar;
 boolean newData = false;
 int stepsize = 100;
 void setup() {
@@ -10,52 +11,74 @@ void setup() {
  digitalWrite(8,LOW);
  digitalWrite(9,HIGH);
 }
-
+//all acess should be done with a two char system
 void loop() {
- recvOneChar();
- showNewData();
- 
+ if(recvChar()==1){
+    control(convertChar(receivedOptionChar));
+ };
+ cleanup();
+
+}
+void cleanup(){
+  receivedOptionChar = "";
+  recievedParaChar = "";
+  newData = false;
+}
+int recvChar() {
+ if (Serial.available() > 0) {
+  receivedOptionChar = Serial.read();
+  if(receivedOptionChar != '\n')
+    receivedParaChar = Serial.read();
+    newData = true;
+    return 1;
+  }
+  return 0;
 }
 
-void recvOneChar() {
- if (Serial.available() > 0) {
-  receivedChar = Serial.read();
-  if(receivedChar != '\n')
-    newData = true;
- }
+int convertChar(char ch){
+  if(int(ch)>96){
+    return int(ch)-61;
+  }
+  if(int(ch)>58){
+    return int(ch)-55;
+  }
+  return int(ch)-48;
 }
 
 void showNewData() {
  if (newData == true) {
   Serial.print("This just in ... ");
-  Serial.println(receivedChar);
+  Serial.println(convertChar(receivedOptionChar));
   newData = false;
  }
 }
 // option selection
 // 1. getSensorXAngle takes two pulls
 // 2. getSensorYAngle takes two pulls
-// 3. stepMotor       takes two pulls
-// 4. bIsMotorsOk     takes two pulls
+// 3. stepMotorUp     takes two pulls
+// 4. stepMotorDown   takes two pulls
+// 5. bIsMotorsOk     takes two pulls
 int control(int option){
   switch(option){
     case 1:
-      recvOneChar();
-      Serial.println(getSensorX(receivedChar));
+      Serial.println(getSensorX(recievedParaChar));
       break;
     case 2:
-      recvOneChar();
-      Serial.println(getSensorY(receivedChar));
+      Serial.println(getSensorY(recievedParaChar));
       break;
     case 3:
-      recvOneChar();
-      Serial.println(stepMotor(receivedChar));
+      Serial.println(stepMotorUp(recievedParaChar));
       break;
     case 4:
-      recvOneChar();
+      Serial.println(stepMotorDown(recievedParaChar));
+      break;
+    case 5:
       Serial.println(bIsMotorsOk());
       break;
+    default:
+      return 1;
   }
+  return 0;
 }
 
 double getSensorX(int pin){
@@ -68,14 +91,22 @@ double getEncoder(int pin){
   
 }
 //dum doesnt look at current to see if motor is stalled. Also doesnt take height into count yet.
-bool stepMotor(int pin){
-  stopper = getEncoder(pin)+stepsize;
+bool stepMotorUp(int pin){
+double stopper = getEncoder(pin)+stepsize;
   while(getEncoder(pin)>=stopper){
     digitalWrite(pin,HIGH);
   }
   digitalWrite(pin,LOW);
   return true;
 }
-bool bIsMotorsOk(){
+bool stepMotorDown(int pin){
+  double stopper = getEncoder(pin)-stepsize;
+  while(getEncoder(pin)<=stopper){
+    digitalWrite(pin,HIGH);
+  }
+  digitalWrite(pin,LOW);
   return true;
+}
+bool bIsMotorsOk(){
+  return false;
 };
