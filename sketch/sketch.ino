@@ -1,10 +1,12 @@
 #define BAUD 9600
 char receivedChar;
 boolean newData = false;
-
+int stepsize = 100;
 void setup() {
  Serial.begin(9600);
  Serial.println("<Arduino is ready>");
+ pinMode(8,OUTPUT);
+ pinMode(9,OUTPUT);
  digitalWrite(8,LOW);
  digitalWrite(9,HIGH);
 }
@@ -62,11 +64,15 @@ double getSensorX(int pin){
 double getSensorY(int pin){
   return analogRead(pin);
 }
-
+double getEncoder(int pin){
+  
+}
 //dum doesnt look at current to see if motor is stalled. Also doesnt take height into count yet.
 bool stepMotor(int pin){
-  digitalWrite(pin,HIGH);
-  delay(500);
+  stopper = getEncoder(pin)+stepsize;
+  while(getEncoder(pin)>=stopper){
+    digitalWrite(pin,HIGH);
+  }
   digitalWrite(pin,LOW);
   return true;
 }

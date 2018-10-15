@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/autoLevel.dir/ardiuno.cpp.o CMakeFiles/autoLevel.dir/house.cpp.o CMakeFiles/autoLevel.dir/jack.cpp.o CMakeFiles/autoLevel.dir/Serial.cpp.o CMakeFiles/autoLevel.dir/testsuite.cpp.o CMakeFiles/autoLevel.dir/sensor.cpp.o  -o autoLevel 

@@ -6,10 +6,12 @@ using std::vector;
 #include <memory>
 using std::shared_ptr;
 using std::make_shared;
+#include "SerialClass.h"	// Library described above
 //ScrewJack motorized
 
 class Jack{
 private:
+	shared_ptr<Serial> port;
     const int maxHeight = 100;
     const int minHeight = 10;
     const double stepSize = .5;
@@ -21,7 +23,7 @@ private:
     const long currentID;
 	bool isGood = true;
 public:
-	const bool isAdjacent(shared_ptr<Jack> jack) {
+	const bool isAdjacent(const shared_ptr<Jack> &jack) {
 		for (auto i : adjacencent) {
 			if (i == jack) {
 				return true;
@@ -29,7 +31,7 @@ public:
 		}
 		return false;
 	}
-    Jack(const double &h):height(h),currentID(ID++) {
+    Jack(const double &h,shared_ptr<Serial> &p):height(h),port(p),currentID(ID++) {
 
     };
 	shared_ptr<Sensor> getSensor(){

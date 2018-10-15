@@ -1,4 +1,4 @@
-/*#define CATCH_CONFIG_MAIN
+#define CATCH_CONFIG_MAIN
 
 #include "catch.hpp"
 #include "house.h"
@@ -124,4 +124,3 @@ TEST_CASE("checklevel test", "[basic]") {
 	saved[3]->getSensor()->setAngles(1, 1);
 	REQUIRE(house.checkLevel() == false);
 }
-*/

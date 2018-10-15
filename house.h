@@ -12,6 +12,7 @@ using std::pair;
 using std::shared_ptr;
 class House{
 private:
+	shared_ptr<Serial> port
     vector<shared_ptr<Jack>> jacks;
     
 public:
