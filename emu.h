@@ -1,17 +1,19 @@
 #ifndef EMU_H
 #define EMU_H
 #include <map>
-using std::map;
+#include "jack.h"
+
 
 class Emu{
     private:
         map<int,Emu_Sensor> sensors;
         map<int,Emu_Sensor> jackToSensor;
-        
+        vector<Jack> allJacks;
     public:
-        Emu(){
+        Emu(const vector<Jack> &j): allJacks(j){
 
-        }
+        };
+        void calculateAngles(const int );
         double tiltXAngle(const int &pin);
         double tiltYAngle(const int &pin);
         void setXAngle(const int &pin,const double &angle);

@@ -1,1 +1,3 @@
-/usr/bin/c++  -g   CMakeFiles/autoLevel.dir/ardiuno.cpp.o CMakeFiles/autoLevel.dir/house.cpp.o CMakeFiles/autoLevel.dir/jack.cpp.o CMakeFiles/autoLevel.dir/Serial.cpp.o CMakeFiles/autoLevel.dir/testsuite.cpp.o CMakeFiles/autoLevel.dir/sensor.cpp.o  -o autoLevel 
+"C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\autoLevel.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\autoLevel.dir/objects.a @CMakeFiles\autoLevel.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\autoLevel.dir/objects.a -Wl,--no-whole-archive  -o autoLevel.exe -Wl,--out-implib,libautoLevel.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\autoLevel.dir\linklibs.rsp

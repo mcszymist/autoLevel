@@ -1,12 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/autoLevel.dir/ardiuno.cpp.o"
-  "CMakeFiles/autoLevel.dir/house.cpp.o"
-  "CMakeFiles/autoLevel.dir/jack.cpp.o"
-  "CMakeFiles/autoLevel.dir/Serial.cpp.o"
-  "CMakeFiles/autoLevel.dir/testsuite.cpp.o"
-  "CMakeFiles/autoLevel.dir/sensor.cpp.o"
+  "CMakeFiles/autoLevel.dir/ardiuno.cpp.obj"
+  "CMakeFiles/autoLevel.dir/house.cpp.obj"
+  "CMakeFiles/autoLevel.dir/jack.cpp.obj"
+  "CMakeFiles/autoLevel.dir/Serial.cpp.obj"
+  "CMakeFiles/autoLevel.dir/testsuite.cpp.obj"
+  "CMakeFiles/autoLevel.dir/sensor.cpp.obj"
   "autoLevel.pdb"
-  "autoLevel"
+  "autoLevel.exe"
+  "autoLevel.exe.manifest"
+  "libautoLevel.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
