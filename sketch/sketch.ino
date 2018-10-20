@@ -1,6 +1,6 @@
 #define BAUD 9600
 char receivedOptionChar;
-char recievedParaChar;
+char receivedParaChar;
 boolean newData = false;
 int stepsize = 100;
 void setup() {
@@ -8,8 +8,7 @@ void setup() {
  Serial.println("<Arduino is ready>");
  pinMode(8,OUTPUT);
  pinMode(9,OUTPUT);
- digitalWrite(8,LOW);
- digitalWrite(9,HIGH);
+
 }
 //all acess should be done with a two char system
 void loop() {
@@ -20,14 +19,15 @@ void loop() {
 
 }
 void cleanup(){
-  receivedOptionChar = "";
-  recievedParaChar = "";
+  receivedOptionChar = char("");
+  receivedParaChar = char("");
   newData = false;
 }
 int recvChar() {
  if (Serial.available() > 0) {
   receivedOptionChar = Serial.read();
   if(receivedOptionChar != '\n')
+    delay(10);
     receivedParaChar = Serial.read();
     newData = true;
     return 1;
@@ -61,16 +61,16 @@ void showNewData() {
 int control(int option){
   switch(option){
     case 1:
-      Serial.println(getSensorX(recievedParaChar));
+      Serial.println(getSensorX(receivedParaChar));
       break;
     case 2:
-      Serial.println(getSensorY(recievedParaChar));
+      Serial.println(getSensorY(receivedParaChar));
       break;
     case 3:
-      Serial.println(stepMotorUp(recievedParaChar));
+      Serial.println(stepMotorUp(receivedParaChar));
       break;
     case 4:
-      Serial.println(stepMotorDown(recievedParaChar));
+      Serial.println(stepMotorDown(receivedParaChar));
       break;
     case 5:
       Serial.println(bIsMotorsOk());
@@ -81,11 +81,11 @@ int control(int option){
   return 0;
 }
 
-double getSensorX(int pin){
-  return analogRead(pin);
+int getSensorX(int pin){
+  return analogRead("A"+pin);
 }
-double getSensorY(int pin){
-  return analogRead(pin);
+int getSensorY(int pin){
+  return analogRead("A"+pin);
 }
 double getEncoder(int pin){
   
