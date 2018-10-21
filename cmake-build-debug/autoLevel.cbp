@@ -84,16 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mcszy/Desktop/autolevel/Serial.cpp">
-			<Option target="autoLevel"/>
-		</Unit>
-		<Unit filename="C:/Users/mcszy/Desktop/autolevel/SerialClass.h">
-			<Option target="autoLevel"/>
-		</Unit>
-		<Unit filename="C:/Users/mcszy/Desktop/autolevel/ardiuno.cpp">
-			<Option target="autoLevel"/>
-		</Unit>
 		<Unit filename="C:/Users/mcszy/Desktop/autolevel/catch.hpp">
+			<Option target="autoLevel"/>
+		</Unit>
+		<Unit filename="C:/Users/mcszy/Desktop/autolevel/emu.cpp">
+			<Option target="autoLevel"/>
+		</Unit>
+		<Unit filename="C:/Users/mcszy/Desktop/autolevel/emu.h">
 			<Option target="autoLevel"/>
 		</Unit>
 		<Unit filename="C:/Users/mcszy/Desktop/autolevel/house.cpp">

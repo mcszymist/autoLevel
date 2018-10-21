@@ -122,59 +122,32 @@ autoLevel/fast:
 	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/build
 .PHONY : autoLevel/fast
 
-Serial.obj: Serial.cpp.obj
+emu.obj: emu.cpp.obj
 
-.PHONY : Serial.obj
-
-# target to build an object file
-Serial.cpp.obj:
-	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/Serial.cpp.obj
-.PHONY : Serial.cpp.obj
-
-Serial.i: Serial.cpp.i
-
-.PHONY : Serial.i
-
-# target to preprocess a source file
-Serial.cpp.i:
-	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/Serial.cpp.i
-.PHONY : Serial.cpp.i
-
-Serial.s: Serial.cpp.s
-
-.PHONY : Serial.s
-
-# target to generate assembly for a file
-Serial.cpp.s:
-	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/Serial.cpp.s
-.PHONY : Serial.cpp.s
-
-ardiuno.obj: ardiuno.cpp.obj
-
-.PHONY : ardiuno.obj
+.PHONY : emu.obj
 
 # target to build an object file
-ardiuno.cpp.obj:
-	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/ardiuno.cpp.obj
-.PHONY : ardiuno.cpp.obj
+emu.cpp.obj:
+	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/emu.cpp.obj
+.PHONY : emu.cpp.obj
 
-ardiuno.i: ardiuno.cpp.i
+emu.i: emu.cpp.i
 
-.PHONY : ardiuno.i
+.PHONY : emu.i
 
 # target to preprocess a source file
-ardiuno.cpp.i:
-	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/ardiuno.cpp.i
-.PHONY : ardiuno.cpp.i
+emu.cpp.i:
+	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/emu.cpp.i
+.PHONY : emu.cpp.i
 
-ardiuno.s: ardiuno.cpp.s
+emu.s: emu.cpp.s
 
-.PHONY : ardiuno.s
+.PHONY : emu.s
 
 # target to generate assembly for a file
-ardiuno.cpp.s:
-	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/ardiuno.cpp.s
-.PHONY : ardiuno.cpp.s
+emu.cpp.s:
+	$(MAKE) -f CMakeFiles\autoLevel.dir\build.make CMakeFiles/autoLevel.dir/emu.cpp.s
+.PHONY : emu.cpp.s
 
 house.obj: house.cpp.obj
 
@@ -293,12 +266,9 @@ help:
 	@echo ... autoLevel
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Serial.obj
-	@echo ... Serial.i
-	@echo ... Serial.s
-	@echo ... ardiuno.obj
-	@echo ... ardiuno.i
-	@echo ... ardiuno.s
+	@echo ... emu.obj
+	@echo ... emu.i
+	@echo ... emu.s
 	@echo ... house.obj
 	@echo ... house.i
 	@echo ... house.s

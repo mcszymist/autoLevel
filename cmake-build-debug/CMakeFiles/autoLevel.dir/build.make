@@ -56,24 +56,10 @@ include CMakeFiles/autoLevel.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/autoLevel.dir/flags.make
 
-CMakeFiles/autoLevel.dir/ardiuno.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
-CMakeFiles/autoLevel.dir/ardiuno.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
-CMakeFiles/autoLevel.dir/ardiuno.cpp.obj: ../ardiuno.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/autoLevel.dir/ardiuno.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\ardiuno.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\ardiuno.cpp
-
-CMakeFiles/autoLevel.dir/ardiuno.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoLevel.dir/ardiuno.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mcszy\Desktop\autolevel\ardiuno.cpp > CMakeFiles\autoLevel.dir\ardiuno.cpp.i
-
-CMakeFiles/autoLevel.dir/ardiuno.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/ardiuno.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mcszy\Desktop\autolevel\ardiuno.cpp -o CMakeFiles\autoLevel.dir\ardiuno.cpp.s
-
 CMakeFiles/autoLevel.dir/house.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
 CMakeFiles/autoLevel.dir/house.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
 CMakeFiles/autoLevel.dir/house.cpp.obj: ../house.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/autoLevel.dir/house.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/autoLevel.dir/house.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\house.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\house.cpp
 
 CMakeFiles/autoLevel.dir/house.cpp.i: cmake_force
@@ -87,7 +73,7 @@ CMakeFiles/autoLevel.dir/house.cpp.s: cmake_force
 CMakeFiles/autoLevel.dir/jack.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
 CMakeFiles/autoLevel.dir/jack.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
 CMakeFiles/autoLevel.dir/jack.cpp.obj: ../jack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/autoLevel.dir/jack.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/autoLevel.dir/jack.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\jack.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\jack.cpp
 
 CMakeFiles/autoLevel.dir/jack.cpp.i: cmake_force
@@ -98,24 +84,24 @@ CMakeFiles/autoLevel.dir/jack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/jack.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mcszy\Desktop\autolevel\jack.cpp -o CMakeFiles\autoLevel.dir\jack.cpp.s
 
-CMakeFiles/autoLevel.dir/Serial.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
-CMakeFiles/autoLevel.dir/Serial.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
-CMakeFiles/autoLevel.dir/Serial.cpp.obj: ../Serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoLevel.dir/Serial.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\Serial.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\Serial.cpp
+CMakeFiles/autoLevel.dir/emu.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
+CMakeFiles/autoLevel.dir/emu.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
+CMakeFiles/autoLevel.dir/emu.cpp.obj: ../emu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/autoLevel.dir/emu.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\emu.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\emu.cpp
 
-CMakeFiles/autoLevel.dir/Serial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoLevel.dir/Serial.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mcszy\Desktop\autolevel\Serial.cpp > CMakeFiles\autoLevel.dir\Serial.cpp.i
+CMakeFiles/autoLevel.dir/emu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoLevel.dir/emu.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\mcszy\Desktop\autolevel\emu.cpp > CMakeFiles\autoLevel.dir\emu.cpp.i
 
-CMakeFiles/autoLevel.dir/Serial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/Serial.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mcszy\Desktop\autolevel\Serial.cpp -o CMakeFiles\autoLevel.dir\Serial.cpp.s
+CMakeFiles/autoLevel.dir/emu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/emu.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\mcszy\Desktop\autolevel\emu.cpp -o CMakeFiles\autoLevel.dir\emu.cpp.s
 
 CMakeFiles/autoLevel.dir/testsuite.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
 CMakeFiles/autoLevel.dir/testsuite.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
 CMakeFiles/autoLevel.dir/testsuite.cpp.obj: ../testsuite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoLevel.dir/testsuite.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoLevel.dir/testsuite.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\testsuite.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\testsuite.cpp
 
 CMakeFiles/autoLevel.dir/testsuite.cpp.i: cmake_force
@@ -129,7 +115,7 @@ CMakeFiles/autoLevel.dir/testsuite.cpp.s: cmake_force
 CMakeFiles/autoLevel.dir/sensor.cpp.obj: CMakeFiles/autoLevel.dir/flags.make
 CMakeFiles/autoLevel.dir/sensor.cpp.obj: CMakeFiles/autoLevel.dir/includes_CXX.rsp
 CMakeFiles/autoLevel.dir/sensor.cpp.obj: ../sensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/autoLevel.dir/sensor.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoLevel.dir/sensor.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\autoLevel.dir\sensor.cpp.obj -c C:\Users\mcszy\Desktop\autolevel\sensor.cpp
 
 CMakeFiles/autoLevel.dir/sensor.cpp.i: cmake_force
@@ -142,27 +128,25 @@ CMakeFiles/autoLevel.dir/sensor.cpp.s: cmake_force
 
 # Object files for target autoLevel
 autoLevel_OBJECTS = \
-"CMakeFiles/autoLevel.dir/ardiuno.cpp.obj" \
 "CMakeFiles/autoLevel.dir/house.cpp.obj" \
 "CMakeFiles/autoLevel.dir/jack.cpp.obj" \
-"CMakeFiles/autoLevel.dir/Serial.cpp.obj" \
+"CMakeFiles/autoLevel.dir/emu.cpp.obj" \
 "CMakeFiles/autoLevel.dir/testsuite.cpp.obj" \
 "CMakeFiles/autoLevel.dir/sensor.cpp.obj"
 
 # External object files for target autoLevel
 autoLevel_EXTERNAL_OBJECTS =
 
-autoLevel.exe: CMakeFiles/autoLevel.dir/ardiuno.cpp.obj
 autoLevel.exe: CMakeFiles/autoLevel.dir/house.cpp.obj
 autoLevel.exe: CMakeFiles/autoLevel.dir/jack.cpp.obj
-autoLevel.exe: CMakeFiles/autoLevel.dir/Serial.cpp.obj
+autoLevel.exe: CMakeFiles/autoLevel.dir/emu.cpp.obj
 autoLevel.exe: CMakeFiles/autoLevel.dir/testsuite.cpp.obj
 autoLevel.exe: CMakeFiles/autoLevel.dir/sensor.cpp.obj
 autoLevel.exe: CMakeFiles/autoLevel.dir/build.make
 autoLevel.exe: CMakeFiles/autoLevel.dir/linklibs.rsp
 autoLevel.exe: CMakeFiles/autoLevel.dir/objects1.rsp
 autoLevel.exe: CMakeFiles/autoLevel.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable autoLevel.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mcszy\Desktop\autolevel\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable autoLevel.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\autoLevel.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

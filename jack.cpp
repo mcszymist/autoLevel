@@ -2,10 +2,6 @@
 
 const bool Jack::raise() {
 	if (bCanStep(true)) {
-	    if(!port->IsConnected()){
-	        return false;
-	    }
-	    port->WriteData("3" + ID,10);
 		height += stepSize;
 		return true;
 	}
@@ -14,11 +10,7 @@ const bool Jack::raise() {
 const bool Jack::lower()
 {
 	if (bCanStep(false)) {
-        if(!port->IsConnected()){
-            return false;
-        }
-        port->WriteData("4" + ID,10);
-        height += stepSize;
+        height -= stepSize;
         return true;
 	}
 	return false;
@@ -42,28 +34,22 @@ const bool Jack::bCanStep(const bool &direction) {
 };
 const bool Jack::bIsGood()
 {
-    if(!port->IsConnected()){
-        return false;
-    }
-    port->WriteData("5" + ID,10);
-    height += stepSize;
     return true;
-	return isGood;
 };
-const bool Jack::addAdjJack(shared_ptr<Jack> jack)
+const bool Jack::addAdjJack(shared_ptr<Jack> jack,const int &direction)
 {
-	for (auto i : adjacencent) {
-		if(i==jack)
+	for (auto i : adjacent) {
+		if(i.first==jack)
 			return true;
 	}
-	adjacencent.push_back(jack);
+	adjacent.push_back(make_pair(jack,direction));
 	return true;
 };
 const bool Jack::removeAdjJack(shared_ptr<Jack> jack)
 {
-	for (size_t i = 0; i < adjacencent.size();i++) {
-		if (adjacencent[i] == jack) {
-			adjacencent.erase(adjacencent.begin() + i);
+	for (size_t i = 0; i < adjacent.size();i++) {
+		if (adjacent[i].first == jack) {
+			adjacent.erase(adjacent.begin() + i);
 			return true;
 		}
 	}

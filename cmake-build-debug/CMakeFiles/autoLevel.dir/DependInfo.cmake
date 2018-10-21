@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/mcszy/Desktop/autolevel/Serial.cpp" "C:/Users/mcszy/Desktop/autolevel/cmake-build-debug/CMakeFiles/autoLevel.dir/Serial.cpp.obj"
-  "C:/Users/mcszy/Desktop/autolevel/ardiuno.cpp" "C:/Users/mcszy/Desktop/autolevel/cmake-build-debug/CMakeFiles/autoLevel.dir/ardiuno.cpp.obj"
+  "C:/Users/mcszy/Desktop/autolevel/emu.cpp" "C:/Users/mcszy/Desktop/autolevel/cmake-build-debug/CMakeFiles/autoLevel.dir/emu.cpp.obj"
   "C:/Users/mcszy/Desktop/autolevel/house.cpp" "C:/Users/mcszy/Desktop/autolevel/cmake-build-debug/CMakeFiles/autoLevel.dir/house.cpp.obj"
   "C:/Users/mcszy/Desktop/autolevel/jack.cpp" "C:/Users/mcszy/Desktop/autolevel/cmake-build-debug/CMakeFiles/autoLevel.dir/jack.cpp.obj"
   "C:/Users/mcszy/Desktop/autolevel/sensor.cpp" "C:/Users/mcszy/Desktop/autolevel/cmake-build-debug/CMakeFiles/autoLevel.dir/sensor.cpp.obj"

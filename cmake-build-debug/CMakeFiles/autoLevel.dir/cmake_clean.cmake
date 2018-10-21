@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/autoLevel.dir/ardiuno.cpp.obj"
   "CMakeFiles/autoLevel.dir/house.cpp.obj"
   "CMakeFiles/autoLevel.dir/jack.cpp.obj"
-  "CMakeFiles/autoLevel.dir/Serial.cpp.obj"
+  "CMakeFiles/autoLevel.dir/emu.cpp.obj"
   "CMakeFiles/autoLevel.dir/testsuite.cpp.obj"
   "CMakeFiles/autoLevel.dir/sensor.cpp.obj"
   "autoLevel.pdb"

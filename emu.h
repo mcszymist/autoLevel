@@ -1,33 +1,22 @@
 #ifndef EMU_H
 #define EMU_H
-#include <map>
+#include <memory>
+using std::shared_ptr;
 #include "jack.h"
 
-
+//The angle is calculated by taken the height of other jacks and using pathageoms theorem to estimate this wouldn't work
+//in the real world but works for testing purpose.
+//all math is in cm
 class Emu{
     private:
-        map<int,Emu_Sensor> sensors;
-        map<int,Emu_Sensor> jackToSensor;
-        vector<Jack> allJacks;
-    public:
-        Emu(const vector<Jack> &j): allJacks(j){
+        const double distance = 800;
+        double tiltXAngle(shared_ptr<Jack> &jack);
+        double tiltYAngle(shared_ptr<Jack> &jack);
+        void setAngle(shared_ptr<Jack> &jack,const double &x,const double &y);
 
-        };
-        void calculateAngles(const int );
-        double tiltXAngle(const int &pin);
-        double tiltYAngle(const int &pin);
-        void setXAngle(const int &pin,const double &angle);
-        void setYAngle(const int &pin,const double &angle);
-        bool stepMotor(const int &pin);
-};
-class Emu_Sensor{
-    private:
-        double xAngle;
-        double yAngle;
     public:
-        double getXAngle(){ return xAngle; };
-        double getYAngle(){ return yAngle; };
-        void setXAngle(const double &angle) : xAngle(angle);
-        void setYAngle(const double &angle) : yAngle(angle);
-}
+        void calculateAngles(shared_ptr<Jack> &jack);
+        void calculateAllAngles(vector<shared_ptr<Jack>> &jack);
+};
+
 #endif
