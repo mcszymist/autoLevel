@@ -3,8 +3,11 @@
 This project was started to try and make a house that will level itself using someform of technology to make this happen.
 
 ## Hardware
+* [Arduino Mega](https://store.arduino.cc/arduino-mega-2560-rev3)
+* [Laptop]
+* [SCA100T-D01](https://www.murata.com/en-us/products/sensor/guide/sensorguide3/sensorguide/sca100t-d01) - Tilt Sensor
+* [Mortoized Screw Jack](https://www.alibaba.com/showroom/motorized-screw-jack.html)
 
-Arduino Mega
 Laptop
 Tilt Sensor (SCA100T-D01)
 Mortoized Screw Jack
@@ -32,13 +35,10 @@ That is where im at today.
 
 All of my testing was using a emulation of real world angle using pathogeoms theorm and using catch 2
 
-### Break down into end to end tests
+### Branch Emu_Testing and master
 
-Explain what these tests test and why
+The Emu_Testing branch has the new algorithm and the test code so it should be the master at this point
 
-```
-Give an example
-```
 
 ### And coding style tests
 
