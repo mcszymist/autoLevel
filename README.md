@@ -12,11 +12,11 @@ This project was started to try and make a house that will level itself using so
 
 Motor Controller
 
-### Prerequisites
+## Prerequisites
 
 The serial libaray im using is windows only.
 
-### Algorithm
+## Algorithm
 
 This is where most of my time was held as there is so many cases to test.
 
@@ -32,20 +32,13 @@ That is where im at today.
 
 ## Running the tests
 
-All of my testing was using a emulation of real world angle using pathogeoms theorm and using catch 2
+All of my testing was using a emulation of real world angle using pathogeoms theorm and using catch 2.
+There is a issue with how im emulating angles that cause condictions to endlessly loop since the angles are not calculated with both adjacent jacks in mind.
 
-### Branch Emu_Testing and master
+## Branch Emu_Testing and master
 
 The Emu_Testing branch has the new algorithm and the test code so it should be the master at this point.
 Master just has the serial code for comunication.
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
