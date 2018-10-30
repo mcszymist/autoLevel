@@ -40,9 +40,14 @@ There is a issue with how im emulating angles that cause condictions to endlessl
 The Emu_Testing branch has the new algorithm and the test code so it should be the master at this point.
 Master just has the serial code for comunication.
 
-## Deployment
+## Changes to be made
 
-Add additional notes about how to deploy this on a live system
+* Fix the Emu_Testing branch to include both jacks in angle calculization so we get accurate angles.
+* Fix my arduino to use a packets system instead of just sending to chars and delaying before recieving.
+* Put a pressure sensor on the jacks head so If the jack comes off the beam the program needs to know not to.
+
+* Everything else as of 2018 I wouldnt change as the research I have done its the best option. 
+
 
 ## Built With
 
