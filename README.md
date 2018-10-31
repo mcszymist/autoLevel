@@ -1,6 +1,10 @@
 # AutoLevel House
 
-This project was started to try and make a house that will level itself using someform of technology to make this happen.
+This project was started to try and make a house that will level itself using someform of technology to make this happen. The reason thisis needed is permafrost causes the house to become unlevel overtime. There seems to be nobody that I have found trying to level a house automaticly.
+
+There is plenty of people testing the presision of tools and pushing them to the limit so I ended up reading a good amount of white papers on wifi, bt, and lasers trying to find the best way to find if the angle was off. After doing all that research I came to the conclusion that laser would work but there is a issue as having a lazer means people cant use there crawl space for storage. It ended up being a simple issue use a high precision inclinometer, done. 
+
+There was also a choice for what type of jack to use and it comes done to either hydralic or motorized screw jack. Hydralic would be awesome but doesnt scale wear and causes the issues of having more pipes to manage and have many safety vaules to slam shut if pressure change. Not very managable in a commercial setting. So in the end a motorized screw jack is the best option.
 
 ## Hardware
 * [Arduino Mega](https://store.arduino.cc/arduino-mega-2560-rev3)
