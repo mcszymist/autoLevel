@@ -13,9 +13,6 @@ There was also a choice for what type of jack to use and it comes done to either
 * [Mortoized Screw Jack](https://www.alibaba.com/showroom/motorized-screw-jack.html)
 * [Motor Controller](https://www.amazon.com/gp/product/B00PU1EUMI/ref=crt_ewc_title_huc_2?ie=UTF8&psc=1&smid=A10DEFS1051Y1M)
 
-
-Motor Controller
-
 ## Prerequisites
 
 The serial libaray im using is windows only.
