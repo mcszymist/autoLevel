@@ -6,9 +6,6 @@ int stepsize = 100;
 void setup() {
  Serial.begin(9600);
  Serial.println("<Arduino is ready>");
- pinMode(8,OUTPUT);
- pinMode(9,OUTPUT);
-
 }
 //all acess should be done with a two char system
 void loop() {
@@ -82,10 +79,10 @@ int control(int option){
 }
 
 int getSensorX(int pin){
-  return analogRead("A"+pin);
+  return analogRead(A3);
 }
 int getSensorY(int pin){
-  return analogRead("A"+pin);
+  return analogRead(A4);
 }
 double getEncoder(int pin){
   

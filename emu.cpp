@@ -11,6 +11,7 @@ using std::shared_ptr;
 //   -> / negative
 
 double Emu::tiltXAngle(shared_ptr<Jack> &jack){
+
     for(auto i : jack->getList()){
         if(i.second == 1) {
             return -atan((jack->getHeight() - i.first->getHeight())/distance);

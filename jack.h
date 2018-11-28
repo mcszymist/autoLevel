@@ -17,7 +17,7 @@ private:
 	//height is in cm
     const int maxHeight = 100;
     const int minHeight = 10;
-    const double stepSize = .05;
+    const double stepSize = .01;
     double height;
     const bool bCanStep(const bool &direction);
 	shared_ptr<Sensor> sense;

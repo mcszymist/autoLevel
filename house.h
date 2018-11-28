@@ -18,6 +18,7 @@ using std::endl;
 
 class House{
 private:
+    bool workingOnPos = true;
 	int counterID = 0;
     vector<shared_ptr<Jack>> jacks;
     Emu emulation{};

@@ -397,51 +397,91 @@ TEST_CASE("Emu_Test leveling six jack", "[Tester]") {
 	REQUIRE(house.checkLevel()==true);
 }
 
-TEST_CASE("Emu_Test leveling six-teen jack", "[Tester]") {
+TEST_CASE("Emu_Test leveling six jack alternating", "[Tester]") {
+    House house;
+    house.addJack(20.0);		// top left	0
+    house.addJack(70.0);		// bot left	1
+    house.addJack(20.0);		// top mid	2
+    house.addJack(70.0);		// bot mid	3
+    house.addJack(20.0);		// top right4
+    house.addJack(70.0);		// bot right5
+    for (auto i : house.getJacks()) {
+        i->makeSensor(10);
+    }
+    auto saved = house.getJacks();
+    saved[0]->addAdjJack(saved[1],11);
+    saved[0]->addAdjJack(saved[2],0);
+
+    saved[1]->addAdjJack(saved[0],10);
+    saved[1]->addAdjJack(saved[3],0);
+
+    saved[2]->addAdjJack(saved[0],1);
+    saved[2]->addAdjJack(saved[3],11);
+    saved[2]->addAdjJack(saved[4],0);
+
+    saved[3]->addAdjJack(saved[1],1);
+    saved[3]->addAdjJack(saved[2],10);
+    saved[3]->addAdjJack(saved[5],0);
+
+    saved[4]->addAdjJack(saved[2],1);
+    saved[4]->addAdjJack(saved[5],11);
+
+    saved[5]->addAdjJack(saved[4],10);
+    saved[5]->addAdjJack(saved[3],1);
+
+    house.emuAngles();
+    REQUIRE(house.checkLevel()==false);
+    house.autoLevel();
+    house.printAllInfo();
+    REQUIRE(house.checkLevel()==true);
+}
+TEST_CASE("Emu_Test leveling nine jack alternating", "[Tester]") {
 	House house;
-	house.addJack(10.0);		//	0	0	0
-	house.addJack(10.0);		// 	1 	0	1
-	house.addJack(10.0);		// 	2 	0	2
-	house.addJack(100.0);		// 	3 	0	3
-	house.addJack(100.0);		// 	0 	1	4
-	house.addJack(100.0);		// 	1 	1	5
-	house.addJack(10.0);		// 	2 	1	6
-	house.addJack(10.0);		// 	3 	1	7
-	house.addJack(10.0);		// 	0 	2	8
-	house.addJack(100.0);		// 	1 	2	9
-	house.addJack(100.0);		// 	2 	2	10
-	house.addJack(100.0);		// 	3 	2	11
-	house.addJack(10.0);		// 	0 	3	12
-	house.addJack(10.0);		// 	1 	3	13
-	house.addJack(10.0);		// 	2 	3	14
-	house.addJack(100.0);		// 	3 	3	15
-
-
+	house.addJack(50.0);		// top left	0
+	house.addJack(70.0);		// mid left	1
+	house.addJack(50.0);		// bot left	2
+	house.addJack(70.0);		// top mid	3
+	house.addJack(50.0);		// mid mid	4
+	house.addJack(70.0);		// bot mid	5
+	house.addJack(50.0);		// top right6
+	house.addJack(70.0);		// mid right7
+	house.addJack(50.0);		// bot right8
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
 	auto saved = house.getJacks();
-	saved[0]->addAdjJack(saved[4],0);
 	saved[0]->addAdjJack(saved[1],11);
+	saved[0]->addAdjJack(saved[3],0);
 
 	saved[1]->addAdjJack(saved[0],10);
+	saved[1]->addAdjJack(saved[4],0);
 	saved[1]->addAdjJack(saved[2],11);
-	saved
 
-	saved[2]->addAdjJack(saved[0],1);
-	saved[2]->addAdjJack(saved[3],11);
-	saved[2]->addAdjJack(saved[4],0);
+	saved[2]->addAdjJack(saved[5],0);
+	saved[2]->addAdjJack(saved[1],10);
 
-	saved[3]->addAdjJack(saved[1],1);
-	saved[3]->addAdjJack(saved[2],10);
-	saved[3]->addAdjJack(saved[5],0);
+	saved[3]->addAdjJack(saved[0],1);
+	saved[3]->addAdjJack(saved[6],0);
+	saved[3]->addAdjJack(saved[4],11);
 
-	saved[4]->addAdjJack(saved[2],1);
+	saved[4]->addAdjJack(saved[1],1);
 	saved[4]->addAdjJack(saved[5],11);
+	saved[4]->addAdjJack(saved[7],0);
+	saved[4]->addAdjJack(saved[3],10);
 
+	saved[5]->addAdjJack(saved[2],1);
+	saved[5]->addAdjJack(saved[8],0);
 	saved[5]->addAdjJack(saved[4],10);
-	saved[5]->addAdjJack(saved[3],1);
 
+	saved[6]->addAdjJack(saved[3],1);
+	saved[6]->addAdjJack(saved[7],11);
+
+	saved[7]->addAdjJack(saved[4],1);
+	saved[7]->addAdjJack(saved[8],11);
+	saved[7]->addAdjJack(saved[6],10);
+
+	saved[8]->addAdjJack(saved[5],1);
+	saved[8]->addAdjJack(saved[7],10);
 	house.emuAngles();
 	REQUIRE(house.checkLevel()==false);
 	house.autoLevel();

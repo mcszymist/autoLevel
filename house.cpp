@@ -7,17 +7,17 @@ void House::findRelations(){
         auto list = jack->getList();
         jack->resetRelation();
         for (auto i : list) {
-            if (i.first->getSensor()->getXAngle() < 0 && i.second == 1 ||
-                i.first->getSensor()->getXAngle() > 0 && i.second == 0) {
+            if (i.first->getSensor()->getXAngle() < i.first->getSensor()->getPrecision() && i.second == 1 ||
+                i.first->getSensor()->getXAngle() > i.first->getSensor()->getPrecision() && i.second == 0) {
                 jack->increaseRelation();
-            } else if (i.first->getSensor()->getXAngle() < 0 && i.second == 0 ||
-                       i.first->getSensor()->getXAngle() > 0 && i.second == 1) {
+            } else if (i.first->getSensor()->getXAngle() < i.first->getSensor()->getPrecision() && i.second == 0 ||
+                       i.first->getSensor()->getXAngle() > i.first->getSensor()->getPrecision() && i.second == 1) {
                 jack->decreaseRelation();
-            } else if (i.first->getSensor()->getYAngle() < 0 && i.second == 11 ||
-                       i.first->getSensor()->getYAngle() > 0 && i.second == 10) {
+            } else if (i.first->getSensor()->getYAngle() < i.first->getSensor()->getPrecision() && i.second == 11 ||
+                       i.first->getSensor()->getYAngle() > i.first->getSensor()->getPrecision() && i.second == 10) {
                 jack->increaseRelation();
-            } else if (i.first->getSensor()->getYAngle() < 0 && i.second == 10 ||
-                       i.first->getSensor()->getYAngle() > 0 && i.second == 11) {
+            } else if (i.first->getSensor()->getYAngle() < i.first->getSensor()->getPrecision() && i.second == 10 ||
+                       i.first->getSensor()->getYAngle() > i.first->getSensor()->getPrecision() && i.second == 11) {
                 jack->decreaseRelation();
             }
         }
@@ -43,13 +43,14 @@ vector<shared_ptr<Jack>> House::greatestIncline(){
 }
 void House::workJacks(vector<shared_ptr<Jack>> work) {
     for(auto i : work){
-        if(i->getRelation() < 0){
+        if(i->getRelation() < 0 && !workingOnPos){
             i->raise();
         }
-        else{
+        else if(i->getRelation() > 0 && workingOnPos){
             i->lower();
         }
     }
+    workingOnPos = !workingOnPos;
 }
 bool House::addJack(const double &h){
     shared_ptr<Jack> jack(new Jack(counterID++,h));
@@ -79,7 +80,7 @@ bool House::bIsGood(){
 bool House::checkLevel(){
 	for (auto i : jacks) {
 		const double hold = fabs(i->getSensor()->getXAngle()) + fabs(i->getSensor()->getYAngle());
-		if (hold > (i->getSensor()->getPrecision()*2.1)) {
+		if (hold > (i->getSensor()->getPrecision()*2.5)) {
 			return false;
 		}
 	}

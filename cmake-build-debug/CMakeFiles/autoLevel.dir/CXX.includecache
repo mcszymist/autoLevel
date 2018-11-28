@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/mcszy/Desktop/autolevel/catch.hpp
+/home/zym/Desktop/CS411/autoLevel/catch.hpp
 TargetConditionals.h
 -
 ciso646
@@ -260,7 +260,7 @@ string
 memory
 -
 Foundation/Foundation.h
-C:/Users/mcszy/Desktop/autolevel/Foundation/Foundation.h
+/home/zym/Desktop/CS411/autoLevel/Foundation/Foundation.h
 algorithm
 -
 random
@@ -440,13 +440,13 @@ algorithm
 cassert
 -
 
-C:/Users/mcszy/Desktop/autolevel/emu.h
+/home/zym/Desktop/CS411/autoLevel/emu.h
 memory
 -
 jack.h
-C:/Users/mcszy/Desktop/autolevel/jack.h
+/home/zym/Desktop/CS411/autoLevel/jack.h
 
-C:/Users/mcszy/Desktop/autolevel/house.h
+/home/zym/Desktop/CS411/autoLevel/house.h
 vector
 -
 memory
@@ -454,15 +454,15 @@ memory
 iostream
 -
 jack.h
-C:/Users/mcszy/Desktop/autolevel/jack.h
+/home/zym/Desktop/CS411/autoLevel/jack.h
 sensor.h
-C:/Users/mcszy/Desktop/autolevel/sensor.h
+/home/zym/Desktop/CS411/autoLevel/sensor.h
 emu.h
-C:/Users/mcszy/Desktop/autolevel/emu.h
+/home/zym/Desktop/CS411/autoLevel/emu.h
 
-C:/Users/mcszy/Desktop/autolevel/jack.h
+/home/zym/Desktop/CS411/autoLevel/jack.h
 sensor.h
-C:/Users/mcszy/Desktop/autolevel/sensor.h
+/home/zym/Desktop/CS411/autoLevel/sensor.h
 vector
 -
 memory
@@ -470,13 +470,13 @@ memory
 utility
 -
 
-C:/Users/mcszy/Desktop/autolevel/sensor.h
+/home/zym/Desktop/CS411/autoLevel/sensor.h
 memory
 -
 
-C:/Users/mcszy/Desktop/autolevel/testsuite.cpp
+/home/zym/Desktop/CS411/autoLevel/testsuite.cpp
 catch.hpp
-C:/Users/mcszy/Desktop/autolevel/catch.hpp
+/home/zym/Desktop/CS411/autoLevel/catch.hpp
 house.h
-C:/Users/mcszy/Desktop/autolevel/house.h
+/home/zym/Desktop/CS411/autoLevel/house.h
 

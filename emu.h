@@ -9,7 +9,7 @@ using std::shared_ptr;
 //all math is in cm
 class Emu{
     private:
-        const double distance = 800;
+        const double distance = 250;
         double tiltXAngle(shared_ptr<Jack> &jack);
         double tiltYAngle(shared_ptr<Jack> &jack);
         void setAngle(shared_ptr<Jack> &jack,const double &x,const double &y);
