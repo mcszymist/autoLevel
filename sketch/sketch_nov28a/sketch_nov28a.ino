@@ -141,9 +141,9 @@ double stopper = getEncoder(pin)+stepsize;
   digitalWrite(pin,LOW);
   return true;
 }
-bool stepMotorDown(int pin){
+bool stepMotorDown(int pin+1){
   double stopper = getEncoder(pin)-stepsize;
-  while(getEncoder(pin)<=stopper){
+  while(getEncoder(pin+1)<=stopper){
     digitalWrite(pin,HIGH);
   }
   digitalWrite(pin,LOW);
