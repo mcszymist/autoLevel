@@ -3,6 +3,7 @@
 const bool Jack::raise() {
 	if (bCanStep(true)) {
 		height += stepSize;
+
 		return true;
 	}
 	return false;

@@ -231,6 +231,33 @@ jack.cpp.s:
 	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/jack.cpp.s
 .PHONY : jack.cpp.s
 
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 sensor.o: sensor.cpp.o
 
 .PHONY : sensor.o
@@ -258,33 +285,6 @@ sensor.cpp.s:
 	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/sensor.cpp.s
 .PHONY : sensor.cpp.s
 
-testsuite.o: testsuite.cpp.o
-
-.PHONY : testsuite.o
-
-# target to build an object file
-testsuite.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/testsuite.cpp.o
-.PHONY : testsuite.cpp.o
-
-testsuite.i: testsuite.cpp.i
-
-.PHONY : testsuite.i
-
-# target to preprocess a source file
-testsuite.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/testsuite.cpp.i
-.PHONY : testsuite.cpp.i
-
-testsuite.s: testsuite.cpp.s
-
-.PHONY : testsuite.s
-
-# target to generate assembly for a file
-testsuite.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/testsuite.cpp.s
-.PHONY : testsuite.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,12 +306,12 @@ help:
 	@echo "... jack.o"
 	@echo "... jack.i"
 	@echo "... jack.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... sensor.o"
 	@echo "... sensor.i"
 	@echo "... sensor.s"
-	@echo "... testsuite.o"
-	@echo "... testsuite.i"
-	@echo "... testsuite.s"
 .PHONY : help
 
 

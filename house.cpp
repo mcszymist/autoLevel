@@ -52,8 +52,8 @@ void House::workJacks(vector<shared_ptr<Jack>> work) {
     }
     workingOnPos = !workingOnPos;
 }
-bool House::addJack(const double &h){
-    shared_ptr<Jack> jack(new Jack(counterID++,h));
+bool House::addJack(const double &h,const int &pin){
+    shared_ptr<Jack> jack(new Jack(counterID++,pin,h));
     jacks.push_back(jack);
     return true;
 }

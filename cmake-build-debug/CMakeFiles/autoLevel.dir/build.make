@@ -96,22 +96,9 @@ CMakeFiles/autoLevel.dir/emu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/emu.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zym/Desktop/CS411/autoLevel/emu.cpp -o CMakeFiles/autoLevel.dir/emu.cpp.s
 
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: CMakeFiles/autoLevel.dir/flags.make
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../testsuite.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoLevel.dir/testsuite.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoLevel.dir/testsuite.cpp.o -c /home/zym/Desktop/CS411/autoLevel/testsuite.cpp
-
-CMakeFiles/autoLevel.dir/testsuite.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoLevel.dir/testsuite.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zym/Desktop/CS411/autoLevel/testsuite.cpp > CMakeFiles/autoLevel.dir/testsuite.cpp.i
-
-CMakeFiles/autoLevel.dir/testsuite.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/testsuite.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zym/Desktop/CS411/autoLevel/testsuite.cpp -o CMakeFiles/autoLevel.dir/testsuite.cpp.s
-
 CMakeFiles/autoLevel.dir/sensor.cpp.o: CMakeFiles/autoLevel.dir/flags.make
 CMakeFiles/autoLevel.dir/sensor.cpp.o: ../sensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoLevel.dir/sensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/autoLevel.dir/sensor.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoLevel.dir/sensor.cpp.o -c /home/zym/Desktop/CS411/autoLevel/sensor.cpp
 
 CMakeFiles/autoLevel.dir/sensor.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/autoLevel.dir/sensor.cpp.s: cmake_force
 
 CMakeFiles/autoLevel.dir/SerialPort.cpp.o: CMakeFiles/autoLevel.dir/flags.make
 CMakeFiles/autoLevel.dir/SerialPort.cpp.o: ../SerialPort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/autoLevel.dir/SerialPort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/autoLevel.dir/SerialPort.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoLevel.dir/SerialPort.cpp.o -c /home/zym/Desktop/CS411/autoLevel/SerialPort.cpp
 
 CMakeFiles/autoLevel.dir/SerialPort.cpp.i: cmake_force
@@ -135,14 +122,27 @@ CMakeFiles/autoLevel.dir/SerialPort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/SerialPort.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zym/Desktop/CS411/autoLevel/SerialPort.cpp -o CMakeFiles/autoLevel.dir/SerialPort.cpp.s
 
+CMakeFiles/autoLevel.dir/main.cpp.o: CMakeFiles/autoLevel.dir/flags.make
+CMakeFiles/autoLevel.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/autoLevel.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/autoLevel.dir/main.cpp.o -c /home/zym/Desktop/CS411/autoLevel/main.cpp
+
+CMakeFiles/autoLevel.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/autoLevel.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zym/Desktop/CS411/autoLevel/main.cpp > CMakeFiles/autoLevel.dir/main.cpp.i
+
+CMakeFiles/autoLevel.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/autoLevel.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zym/Desktop/CS411/autoLevel/main.cpp -o CMakeFiles/autoLevel.dir/main.cpp.s
+
 # Object files for target autoLevel
 autoLevel_OBJECTS = \
 "CMakeFiles/autoLevel.dir/house.cpp.o" \
 "CMakeFiles/autoLevel.dir/jack.cpp.o" \
 "CMakeFiles/autoLevel.dir/emu.cpp.o" \
-"CMakeFiles/autoLevel.dir/testsuite.cpp.o" \
 "CMakeFiles/autoLevel.dir/sensor.cpp.o" \
-"CMakeFiles/autoLevel.dir/SerialPort.cpp.o"
+"CMakeFiles/autoLevel.dir/SerialPort.cpp.o" \
+"CMakeFiles/autoLevel.dir/main.cpp.o"
 
 # External object files for target autoLevel
 autoLevel_EXTERNAL_OBJECTS =
@@ -150,9 +150,9 @@ autoLevel_EXTERNAL_OBJECTS =
 autoLevel: CMakeFiles/autoLevel.dir/house.cpp.o
 autoLevel: CMakeFiles/autoLevel.dir/jack.cpp.o
 autoLevel: CMakeFiles/autoLevel.dir/emu.cpp.o
-autoLevel: CMakeFiles/autoLevel.dir/testsuite.cpp.o
 autoLevel: CMakeFiles/autoLevel.dir/sensor.cpp.o
 autoLevel: CMakeFiles/autoLevel.dir/SerialPort.cpp.o
+autoLevel: CMakeFiles/autoLevel.dir/main.cpp.o
 autoLevel: CMakeFiles/autoLevel.dir/build.make
 autoLevel: CMakeFiles/autoLevel.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable autoLevel"

@@ -9,10 +9,13 @@ using std::make_shared;
 
 #include <utility>
 using std::pair;
+#include "SerialPort.hpp"
+using namespace mn::CppLinuxSerial;
 //ScrewJack motorized
 
 class Jack{
 private:
+    int pin;
 	int currentRelation = 0;
 	//height is in cm
     const int maxHeight = 100;
@@ -48,7 +51,7 @@ public:
 		}
 		return false;
 	}
-    Jack(const int &id, const double &h):height(h),ID(id) {
+    Jack(shared_ptr<SerialPort> serial,const int &id,const int &p, const double &h):height(h),ID(id),pin(p) {
 
     };
 	shared_ptr<Sensor> getSensor(){

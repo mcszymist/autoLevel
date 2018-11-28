@@ -18,6 +18,7 @@ TEST_CASE("Serial Testing", "[Serial]"){
 	readData = serial.recvWithStartEndMarkers();
 	REQUIRE(stoi(readData) < 1000);
 }
+
 TEST_CASE( "house basic test", "[baisc]" ) {
 
     House house;

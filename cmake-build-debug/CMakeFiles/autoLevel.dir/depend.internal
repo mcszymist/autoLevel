@@ -11,6 +11,7 @@ CMakeFiles/autoLevel.dir/emu.cpp.o
  /home/zym/Desktop/CS411/autoLevel/jack.h
  /home/zym/Desktop/CS411/autoLevel/sensor.h
 CMakeFiles/autoLevel.dir/house.cpp.o
+ /home/zym/Desktop/CS411/autoLevel/SerialPort.hpp
  /home/zym/Desktop/CS411/autoLevel/emu.h
  /home/zym/Desktop/CS411/autoLevel/house.cpp
  /home/zym/Desktop/CS411/autoLevel/house.h
@@ -20,14 +21,13 @@ CMakeFiles/autoLevel.dir/jack.cpp.o
  /home/zym/Desktop/CS411/autoLevel/jack.cpp
  /home/zym/Desktop/CS411/autoLevel/jack.h
  /home/zym/Desktop/CS411/autoLevel/sensor.h
-CMakeFiles/autoLevel.dir/sensor.cpp.o
- /home/zym/Desktop/CS411/autoLevel/sensor.cpp
- /home/zym/Desktop/CS411/autoLevel/sensor.h
-CMakeFiles/autoLevel.dir/testsuite.cpp.o
+CMakeFiles/autoLevel.dir/main.cpp.o
  /home/zym/Desktop/CS411/autoLevel/SerialPort.hpp
- /home/zym/Desktop/CS411/autoLevel/catch.hpp
  /home/zym/Desktop/CS411/autoLevel/emu.h
  /home/zym/Desktop/CS411/autoLevel/house.h
  /home/zym/Desktop/CS411/autoLevel/jack.h
+ /home/zym/Desktop/CS411/autoLevel/main.cpp
  /home/zym/Desktop/CS411/autoLevel/sensor.h
- /home/zym/Desktop/CS411/autoLevel/testsuite.cpp
+CMakeFiles/autoLevel.dir/sensor.cpp.o
+ /home/zym/Desktop/CS411/autoLevel/sensor.cpp
+ /home/zym/Desktop/CS411/autoLevel/sensor.h

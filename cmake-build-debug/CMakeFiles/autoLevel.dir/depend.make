@@ -10,6 +10,7 @@ CMakeFiles/autoLevel.dir/emu.cpp.o: ../emu.h
 CMakeFiles/autoLevel.dir/emu.cpp.o: ../jack.h
 CMakeFiles/autoLevel.dir/emu.cpp.o: ../sensor.h
 
+CMakeFiles/autoLevel.dir/house.cpp.o: ../SerialPort.hpp
 CMakeFiles/autoLevel.dir/house.cpp.o: ../emu.h
 CMakeFiles/autoLevel.dir/house.cpp.o: ../house.cpp
 CMakeFiles/autoLevel.dir/house.cpp.o: ../house.h
@@ -20,14 +21,13 @@ CMakeFiles/autoLevel.dir/jack.cpp.o: ../jack.cpp
 CMakeFiles/autoLevel.dir/jack.cpp.o: ../jack.h
 CMakeFiles/autoLevel.dir/jack.cpp.o: ../sensor.h
 
+CMakeFiles/autoLevel.dir/main.cpp.o: ../SerialPort.hpp
+CMakeFiles/autoLevel.dir/main.cpp.o: ../emu.h
+CMakeFiles/autoLevel.dir/main.cpp.o: ../house.h
+CMakeFiles/autoLevel.dir/main.cpp.o: ../jack.h
+CMakeFiles/autoLevel.dir/main.cpp.o: ../main.cpp
+CMakeFiles/autoLevel.dir/main.cpp.o: ../sensor.h
+
 CMakeFiles/autoLevel.dir/sensor.cpp.o: ../sensor.cpp
 CMakeFiles/autoLevel.dir/sensor.cpp.o: ../sensor.h
-
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../SerialPort.hpp
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../catch.hpp
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../emu.h
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../house.h
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../jack.h
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../sensor.h
-CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../testsuite.cpp
 

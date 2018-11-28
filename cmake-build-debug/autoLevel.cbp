@@ -116,13 +116,13 @@
 		<Unit filename="/home/zym/Desktop/CS411/autoLevel/jack.h">
 			<Option target="autoLevel"/>
 		</Unit>
+		<Unit filename="/home/zym/Desktop/CS411/autoLevel/main.cpp">
+			<Option target="autoLevel"/>
+		</Unit>
 		<Unit filename="/home/zym/Desktop/CS411/autoLevel/sensor.cpp">
 			<Option target="autoLevel"/>
 		</Unit>
 		<Unit filename="/home/zym/Desktop/CS411/autoLevel/sensor.h">
-			<Option target="autoLevel"/>
-		</Unit>
-		<Unit filename="/home/zym/Desktop/CS411/autoLevel/testsuite.cpp">
 			<Option target="autoLevel"/>
 		</Unit>
 		<Unit filename="/home/zym/Desktop/CS411/autoLevel/CMakeLists.txt">

@@ -5,9 +5,22 @@ boolean newData = false;
 
 int option = -1;
 int pin = -1;
+void reset(){
+  digitalWrite(53,HIGH);
+  digitalWrite(51,HIGH);
+  digitalWrite(49,HIGH);
+  digitalWrite(47,HIGH);
+}
+
 void setup() {
     Serial.begin(115200);
     Serial.println("<Arduino is ready>");
+      pinMode(51,OUTPUT);
+  pinMode(49,OUTPUT);
+  pinMode(53,OUTPUT);
+  pinMode(47,OUTPUT);
+  pinMode(45,OUTPUT);
+  reset();
 }
 void parseData(){
     char * strtokIndx;
@@ -100,7 +113,6 @@ int control(){
       Serial.print("<");
       Serial.print(getSensorY(pin));
       Serial.print(">");
-
       break;
     case 3:
       Serial.print("<");
@@ -129,24 +141,19 @@ int getSensorX(int pin){
 int getSensorY(int pin){
   return analogRead("A"+pin);
 }
-double getEncoder(int pin){
-  
-}
+
 //dum doesnt look at current to see if motor is stalled. Also doesnt take height into count yet.
 bool stepMotorUp(int pin){
-double stopper = getEncoder(pin)+stepsize;
-  while(getEncoder(pin)>=stopper){
-    digitalWrite(pin,HIGH);
-  }
+  
   digitalWrite(pin,LOW);
+  delay(2000);
+  digitalWrite(pin,HIGH);
   return true;
 }
-bool stepMotorDown(int pin+1){
-  double stopper = getEncoder(pin)-stepsize;
-  while(getEncoder(pin+1)<=stopper){
-    digitalWrite(pin,HIGH);
-  }
-  digitalWrite(pin,LOW);
+bool stepMotorDown(int pin){
+  digitalWrite(pin+1,LOW);
+  delay(2000);
+  digitalWrite(pin+1,HIGH);
   return true;
 }
 bool bIsMotorsOk(){

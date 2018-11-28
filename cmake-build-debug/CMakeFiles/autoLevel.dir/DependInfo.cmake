@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zym/Desktop/CS411/autoLevel/emu.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/emu.cpp.o"
   "/home/zym/Desktop/CS411/autoLevel/house.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/house.cpp.o"
   "/home/zym/Desktop/CS411/autoLevel/jack.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/jack.cpp.o"
+  "/home/zym/Desktop/CS411/autoLevel/main.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/main.cpp.o"
   "/home/zym/Desktop/CS411/autoLevel/sensor.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/sensor.cpp.o"
-  "/home/zym/Desktop/CS411/autoLevel/testsuite.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/testsuite.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
