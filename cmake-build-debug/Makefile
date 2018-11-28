@@ -123,6 +123,33 @@ autoLevel/fast:
 	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/build
 .PHONY : autoLevel/fast
 
+SerialPort.o: SerialPort.cpp.o
+
+.PHONY : SerialPort.o
+
+# target to build an object file
+SerialPort.cpp.o:
+	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/SerialPort.cpp.o
+.PHONY : SerialPort.cpp.o
+
+SerialPort.i: SerialPort.cpp.i
+
+.PHONY : SerialPort.i
+
+# target to preprocess a source file
+SerialPort.cpp.i:
+	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/SerialPort.cpp.i
+.PHONY : SerialPort.cpp.i
+
+SerialPort.s: SerialPort.cpp.s
+
+.PHONY : SerialPort.s
+
+# target to generate assembly for a file
+SerialPort.cpp.s:
+	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/SerialPort.cpp.s
+.PHONY : SerialPort.cpp.s
+
 emu.o: emu.cpp.o
 
 .PHONY : emu.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... autoLevel"
+	@echo "... SerialPort.o"
+	@echo "... SerialPort.i"
+	@echo "... SerialPort.s"
 	@echo "... emu.o"
 	@echo "... emu.i"
 	@echo "... emu.s"

@@ -15,4 +15,4 @@ add_executable(autoLevel
         emu.cpp
         emu.h
         testsuite.cpp
-        sensor.cpp)
+        sensor.cpp SerialPort.cpp SerialPort.hpp Exception.hpp)
