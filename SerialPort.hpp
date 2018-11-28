@@ -87,7 +87,7 @@ namespace mn {
             ///                 to wait indefinitely for new data.
             /// \throws		CppLinuxSerial::Exception if state != OPEN.
             void Read(std::string& data);
-
+            std::string recvWithStartEndMarkers();
         private:
 
             /// \brief		Returns a populated termios structure for the passed in file descriptor.

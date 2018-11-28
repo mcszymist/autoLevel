@@ -1,6 +1,7 @@
 #ifndef HOUSE_H
 #define HOUSE_H
 
+#include "SerialPort.hpp"
 #include <vector>
 using std::vector;
 using std::size_t;
@@ -18,6 +19,7 @@ using std::endl;
 
 class House{
 private:
+	SerialPort serial("/dev/ttyACM0",BaudRate::B_115200);
     bool workingOnPos = true;
 	int counterID = 0;
     vector<shared_ptr<Jack>> jacks;

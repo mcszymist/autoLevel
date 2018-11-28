@@ -1,10 +1,10 @@
-#define BAUD 9600
+#define BAUD 115200
 char receivedOptionChar;
 char receivedParaChar;
 boolean newData = false;
 int stepsize = 100;
 void setup() {
- Serial.begin(9600);
+ Serial.begin(115200);
  Serial.println("<Arduino is ready>");
 }
 //all acess should be done with a two char system
@@ -73,16 +73,18 @@ int control(int option){
       Serial.println(bIsMotorsOk());
       break;
     default:
+      newData = false;
       return 1;
   }
+  newData = false;
   return 0;
 }
 
 int getSensorX(int pin){
-  return analogRead(A3);
+  return analogRead("A"+pin);
 }
 int getSensorY(int pin){
-  return analogRead(A4);
+  return analogRead("A"+pin);
 }
 double getEncoder(int pin){
   

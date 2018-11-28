@@ -23,6 +23,7 @@ CMakeFiles/autoLevel.dir/jack.cpp.o: ../sensor.h
 CMakeFiles/autoLevel.dir/sensor.cpp.o: ../sensor.cpp
 CMakeFiles/autoLevel.dir/sensor.cpp.o: ../sensor.h
 
+CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../SerialPort.hpp
 CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../catch.hpp
 CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../emu.h
 CMakeFiles/autoLevel.dir/testsuite.cpp.o: ../house.h

@@ -2,7 +2,22 @@
 
 #include "catch.hpp"
 #include "house.h"
+#include "SerialPort.hpp"
+using namespace mn::CppLinuxSerial;
 
+TEST_CASE("Serial Testing", "[Serial]"){
+    SerialPort serial("/dev/ttyACM0",BaudRate::B_115200);
+    serial.Open();
+    std::string readData;
+    readData = serial.recvWithStartEndMarkers();
+    REQUIRE(readData == "Arduino is ready");
+    serial.Write("<5,1>");
+	readData = serial.recvWithStartEndMarkers();
+    REQUIRE(readData == "0");
+	serial.Write("<1,1>");
+	readData = serial.recvWithStartEndMarkers();
+	REQUIRE(stoi(readData) < 1000);
+}
 TEST_CASE( "house basic test", "[baisc]" ) {
 
     House house;

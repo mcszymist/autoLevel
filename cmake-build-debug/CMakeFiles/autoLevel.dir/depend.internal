@@ -24,6 +24,7 @@ CMakeFiles/autoLevel.dir/sensor.cpp.o
  /home/zym/Desktop/CS411/autoLevel/sensor.cpp
  /home/zym/Desktop/CS411/autoLevel/sensor.h
 CMakeFiles/autoLevel.dir/testsuite.cpp.o
+ /home/zym/Desktop/CS411/autoLevel/SerialPort.hpp
  /home/zym/Desktop/CS411/autoLevel/catch.hpp
  /home/zym/Desktop/CS411/autoLevel/emu.h
  /home/zym/Desktop/CS411/autoLevel/house.h

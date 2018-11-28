@@ -317,5 +317,33 @@ namespace mn {
             timeout_ms_ = timeout_ms;
         }
 
+        std::string SerialPort::recvWithStartEndMarkers() {
+            bool newData = false;
+            static bool recvInProgress = false;
+
+            char startMarker = '<';
+            char endMarker = '>';
+            std::string rcs{};
+            std::string newS{};
+
+            // if (Serial.available() > 0) {
+            while (newData == false) {
+                Read(rcs);
+                for(auto rc : rcs) {
+                    if (recvInProgress == true) {
+                        if (rc != endMarker) {
+                            newS.push_back(rc);
+                        } else {
+                            recvInProgress = false;
+                            newData = true;
+                        }
+                    } else if (rc == startMarker) {
+                        recvInProgress = true;
+                    }
+                }
+            }
+            return newS;
+        }
+
     } // namespace CppLinuxSerial
 } // namespace mn

@@ -1,16 +1,4 @@
 /opt/CLion/clion-2018.2.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/zym/Desktop/CS411/autoLevel
 -- Configuring done
-CMake Error at CMakeLists.txt:8 (add_executable):
-  Cannot find source file:
-
-    SerialPort.h
-
-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
-  .hpp .hxx .in .txx
-
-
-CMake Error at CMakeLists.txt:8 (add_executable):
-  No SOURCES given to target: autoLevel
-
-
+-- Generating done
 -- Build files have been written to: /home/zym/Desktop/CS411/autoLevel/cmake-build-debug
