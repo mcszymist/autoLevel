@@ -13,14 +13,14 @@ using std::asin;
 const double Sensor::getXAngle(){
     serial->Write("<1," + pin + '>');
     auto angle = stoi(serial->recvWithStartEndMarkers());
-    double fAngle = asin(angle * (5.0/1024.0));
+    double fAngle = asin(((angle * (5.0/1024.0))-2.5)/.035);
     xAngle = fAngle;
     return fAngle;
 };
 const double Sensor::getYAngle(){
     serial->Write("<2," + pin + '>');
     auto angle = stoi(serial->recvWithStartEndMarkers());
-    double fAngle = asin(angle * (5.0/1024.0));
+    double fAngle = asin(((angle * (5.0/1024.0))-2.5)/.035);
     yAngle = fAngle;
     return fAngle;
 };
