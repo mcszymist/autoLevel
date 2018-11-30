@@ -10,6 +10,7 @@ void reset(){
   digitalWrite(51,HIGH);
   digitalWrite(49,HIGH);
   digitalWrite(47,HIGH);
+  
 }
 
 void setup() {
@@ -19,7 +20,6 @@ void setup() {
   pinMode(49,OUTPUT);
   pinMode(53,OUTPUT);
   pinMode(47,OUTPUT);
-  pinMode(45,OUTPUT);
   reset();
 }
 void parseData(){
@@ -146,14 +146,18 @@ int getSensorY(int pin){
 bool stepMotorUp(int pin){
   
   digitalWrite(pin,LOW);
-  delay(2000);
+  delay(1000);
   digitalWrite(pin,HIGH);
   return true;
 }
 bool stepMotorDown(int pin){
-  digitalWrite(pin+1,LOW);
-  delay(2000);
-  digitalWrite(pin+1,HIGH);
+  digitalWrite(51,LOW);
+  digitalWrite(53,LOW);
+  digitalWrite(pin,LOW);
+  delay(1000);
+  digitalWrite(pin,HIGH);
+  digitalWrite(51,HIGH);
+  digitalWrite(53,HIGH);
   return true;
 }
 bool bIsMotorsOk(){

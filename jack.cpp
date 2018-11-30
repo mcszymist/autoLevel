@@ -2,17 +2,22 @@
 
 const bool Jack::raise() {
 	if (bCanStep(true)) {
-		height += stepSize;
-
-		return true;
+		serial->Write("<4," + pin + '>');
+		if("1" == serial->recvWithStartEndMarkers()){
+			height += stepSize;
+			return true;
+		}
 	}
 	return false;
 }
 const bool Jack::lower()
 {
 	if (bCanStep(false)) {
-        height -= stepSize;
-        return true;
+		serial->Write("<3," + pin + '>');
+		if("1" == serial->recvWithStartEndMarkers()){
+			height -= stepSize;
+			return true;
+		}
 	}
 	return false;
 }

@@ -23,6 +23,7 @@ private:
     const double stepSize = .01;
     double height;
     const bool bCanStep(const bool &direction);
+    shared_ptr<SerialPort> serial;
 	shared_ptr<Sensor> sense;
     vector<pair<shared_ptr<Jack>,int>> adjacent;
     const long ID;
@@ -51,14 +52,14 @@ public:
 		}
 		return false;
 	}
-    Jack(shared_ptr<SerialPort> serial,const int &id,const int &p, const double &h):height(h),ID(id),pin(p) {
+    Jack(shared_ptr<SerialPort> s,const int &id,const int &p, const double &h):serial(s),height(h),ID(id),pin(p) {
 
     };
 	shared_ptr<Sensor> getSensor(){
         return sense;
     }
-    void makeSensor(const int &id){
-		sense = make_shared<Sensor>(id);
+    void makeSensor(const int &pin){
+		sense = make_shared<Sensor>(serial,pin);
     }
 	const bool raise();
 	const bool lower();

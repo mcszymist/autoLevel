@@ -21,12 +21,12 @@ using std::endl;
 
 class House{
 private:
-
+	//Emu emulation{};
 
     bool workingOnPos = true;
 	int counterID = 0;
     vector<shared_ptr<Jack>> jacks;
-    Emu emulation{};
+
     shared_ptr<SerialPort> serial;
 public:
 
@@ -49,9 +49,11 @@ public:
     bool bIsGood();
 	//false = unlevel, true = level
     bool checkLevel();
+    /*
     void emuAngles(){
     	emulation.calculateAllAngles(jacks);
     };
+     */
     void printAllInfo(){
 		for(auto i : jacks){
 			cout << "Jack: " << i->getID() << endl;
