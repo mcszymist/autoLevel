@@ -95,5 +95,5 @@ IMAGE
 * Tyler J Roberts
 
 ## Code sources
-* Serial Libary from 
+* Serial Libary by Geoffrey Hunter
 
