@@ -11,11 +11,25 @@ There was also a choice for what type of jack to use and it comes done to either
 * Laptop
 * [SCA100T-D01](https://www.murata.com/en-us/products/sensor/guide/sensorguide3/sensorguide/sca100t-d01) - Tilt Sensor
 * [Mortoized Screw Jack](https://www.alibaba.com/showroom/motorized-screw-jack.html)
-* [Motor Controller](https://www.amazon.com/gp/product/B00PU1EUMI/ref=crt_ewc_title_huc_2?ie=UTF8&psc=1&smid=A10DEFS1051Y1M)
+* [Relay Module](https://www.amazon.com/gp/product/B00PU1EUMI/ref=crt_ewc_title_huc_2?ie=UTF8&psc=1&smid=A10DEFS1051Y1M)
 
-## Prerequisites
+## How to Use
 
-The serial libaray im using is windows only.
+* Include the house class
+* House house; 
+* Create a Jack - house.addJack(double height,int pin);
+* Add the jacks that are Adjacent and relative direction - addAdjJack(Jack,int Location); 0 = left, 1 = right, 10 = down, 11 = up;
+* Add sensors to there respective jacks - makeSensor(int pin);
+* autoLevel() will level your house.
+* checklevel() will report if the house needs to be leveled.
+
+## Comunication between arduino
+* Packet system using < as start and > as end charicters.
+* The packet system is a Blocking read/write.
+TODO:
+* To resend packets if the return packet was never recieved.
+## Relay Wiring
+IMAGE
 
 ## Algorithm
 
@@ -31,35 +45,33 @@ You cant raise and lower at the same time as you can step pass eachother which i
 
 That is where im at today.
 
-## Running the tests
+## Emulating testing
 
 All of my testing was using a emulation of real world angle using pathogeoms theorm and using catch 2.
 There is a issue with how im emulating angles that cause condictions to endlessly loop since the angles are not calculated with both adjacent jacks in mind.
 
-## Branch Emu_Testing and master
+## Full Ciruitry
+IMAGE
+## log
 
-The Emu_Testing branch has the new algorithm and the test code so it should be the master at this point.
-Master just has the serial code for comunication.
+
 
 ## Changes to be made
 
-* Fix the Emu_Testing branch to include both jacks in angle calculization so we get accurate angles.
-* Fix my arduino to use a packets system instead of just sending to chars and delaying before recieving.
 * Put a pressure sensor on the jacks head so If the jack comes off the beam the program needs to know not to.
-
-* Everything else as of 2018 I wouldnt change as the research I have done its the best option. 
-
+* add encoders to verify the amount of movement accuring.
+* add code to stop system if jack is returning bad tilt data.
 
 ## Built With
 
 * Cmake
 * C++
-* Windows if using serial.
+* Linux for serial libaray
 
 ## Authors
 
 * Tyler J Roberts
 
 ## Code sources
-* Arduino website for serial is the bulk of my serial code.
+* Serial Libary from 
 
