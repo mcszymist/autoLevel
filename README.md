@@ -14,6 +14,9 @@ There was also a choice for what type of jack to use and it comes done to either
 * [Relay Module](https://www.amazon.com/gp/product/B00PU1EUMI/ref=crt_ewc_title_huc_2?ie=UTF8&psc=1&smid=A10DEFS1051Y1M)
 
 ## How to Use
+* Choose one sketch for arduino
+* This one is for voltage to angle
+* This one for I2C
 
 * Include the house class
 * House house; 
@@ -88,6 +91,7 @@ IMAGE
 
 * Cmake
 * C++
+* Arduino IDE
 * Linux for serial libaray
 
 ## Authors
