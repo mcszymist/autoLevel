@@ -26,9 +26,10 @@ There was also a choice for what type of jack to use and it comes done to either
 ## Comunication between arduino
 * Packet system using < as start and > as end charicters.
 * The packet system is a Blocking read/write.
-TODO:
-* To resend packets if the return packet was never recieved.
+
+* TODO: To resend packets if the return packet was never recieved.
 ## Relay Wiring
+
 IMAGE
 
 ## Algorithm
@@ -51,9 +52,30 @@ All of my testing was using a emulation of real world angle using pathogeoms the
 There is a issue with how im emulating angles that cause condictions to endlessly loop since the angles are not calculated with both adjacent jacks in mind.
 
 ## Full Ciruitry
+
 IMAGE
+
 ## log
 
+* Day 1: Arduino to Sensor reports correctly
+* Day 2: Strted working on the Relay wiring and comunication.
+* Day 2: Made a short Curcuit on my 12V supply opps need to figure a curcuit that wont let that happen.
+* Day 2 midnight: AHH figured it out.
+* Day 3: Implemeted the idea works.
+* Day 4: Arduino to Relay Controling motors is flawless
+* Day 5: Arduino to C++ over serial working well after a few hours of finding undefined behavor with string concating in arduino.
+* Day 6: went to homedepo got all missing pieces and 16 gauge wire. wish it was smaller.
+* Day 7: Wire the schematic to have longer leads so i can place the sensor on beam.
+* Day 9: Arduino now resets with all the peices together after rewiring. Cant figure out why as no voltage spike or underspike.
+* Day 11: Been trying to figure out this issue with arduino resets. They only happen once in awhile when i call the relay.
+* Day 14: Isolated Relay from arduino fully still getting resets.
+* Day 14: Think I fixed it but I burnt up my tilt sensor in the process.
+* Day 15: Tried to use a cheaper sensor using i2c and reworked code to use it.
+* Day 16: Got the sensor to comunicate and code working with it the issue is the sensor is so inaccurate I cant get a good data reading to make offsets.
+* Day 16: I give up on getting a offset for this sensor spent 4 hours and havent got one good offset this sensor might be bad.
+* Day 17: Made presentation.
+* Day 18: Presented.
+* Day 25: Updated Blog.
 
 
 ## Changes to be made
