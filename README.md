@@ -33,7 +33,7 @@ There was also a choice for what type of jack to use and it comes done to either
 * TODO: To resend packets if the return packet was never recieved.
 ## Relay Wiring
 
-IMAGE
+![alt text](https://github.com/mcszymist/autoLevel/blob/master/Pictures/Relay.png)
 
 ## Algorithm
 
