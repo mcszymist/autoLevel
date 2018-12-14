@@ -11,11 +11,29 @@ There was also a choice for what type of jack to use and it comes done to either
 * Laptop
 * [SCA100T-D01](https://www.murata.com/en-us/products/sensor/guide/sensorguide3/sensorguide/sca100t-d01) - Tilt Sensor
 * [Mortoized Screw Jack](https://www.alibaba.com/showroom/motorized-screw-jack.html)
-* [Motor Controller](https://www.amazon.com/gp/product/B00PU1EUMI/ref=crt_ewc_title_huc_2?ie=UTF8&psc=1&smid=A10DEFS1051Y1M)
+* [Relay Module](https://www.amazon.com/gp/product/B00PU1EUMI/ref=crt_ewc_title_huc_2?ie=UTF8&psc=1&smid=A10DEFS1051Y1M)
 
-## Prerequisites
+## How to Use
+* Choose one sketch for arduino
+* This one is for voltage to angle
+* This one for I2C
 
-The serial libaray im using is windows only.
+* Include the house class
+* House house; 
+* Create a Jack - house.addJack(double height,int pin);
+* Add the jacks that are Adjacent and relative direction - addAdjJack(Jack,int Location); 0 = left, 1 = right, 10 = down, 11 = up;
+* Add sensors to there respective jacks - makeSensor(int pin);
+* autoLevel() will level your house.
+* checklevel() will report if the house needs to be leveled.
+
+## Comunication between arduino
+* Packet system using < as start and > as end charicters.
+* The packet system is a Blocking read/write.
+
+* TODO: To resend packets if the return packet was never recieved.
+## Relay Wiring
+
+IMAGE
 
 ## Algorithm
 
@@ -31,35 +49,55 @@ You cant raise and lower at the same time as you can step pass eachother which i
 
 That is where im at today.
 
-## Running the tests
+## Emulating testing
 
 All of my testing was using a emulation of real world angle using pathogeoms theorm and using catch 2.
 There is a issue with how im emulating angles that cause condictions to endlessly loop since the angles are not calculated with both adjacent jacks in mind.
 
-## Branch Emu_Testing and master
+## Full Ciruitry
 
-The Emu_Testing branch has the new algorithm and the test code so it should be the master at this point.
-Master just has the serial code for comunication.
+IMAGE
+
+## log
+
+* Day 1: Arduino to Sensor reports correctly
+* Day 2: Strted working on the Relay wiring and comunication.
+* Day 2: Made a short Curcuit on my 12V supply opps need to figure a curcuit that wont let that happen.
+* Day 2 midnight: AHH figured it out.
+* Day 3: Implemeted the idea works.
+* Day 4: Arduino to Relay Controling motors is flawless
+* Day 5: Arduino to C++ over serial working well after a few hours of finding undefined behavor with string concating in arduino.
+* Day 6: went to homedepo got all missing pieces and 16 gauge wire. wish it was smaller.
+* Day 7: Wire the schematic to have longer leads so i can place the sensor on beam.
+* Day 9: Arduino now resets with all the peices together after rewiring. Cant figure out why as no voltage spike or underspike.
+* Day 11: Been trying to figure out this issue with arduino resets. They only happen once in awhile when i call the relay.
+* Day 14: Isolated Relay from arduino fully still getting resets.
+* Day 14: Think I fixed it but I burnt up my tilt sensor in the process.
+* Day 15: Tried to use a cheaper sensor using i2c and reworked code to use it.
+* Day 16: Got the sensor to comunicate and code working with it the issue is the sensor is so inaccurate I cant get a good data reading to make offsets.
+* Day 16: I give up on getting a offset for this sensor spent 4 hours and havent got one good offset this sensor might be bad.
+* Day 17: Made presentation.
+* Day 18: Presented.
+* Day 25: Updated Blog.
+
 
 ## Changes to be made
 
-* Fix the Emu_Testing branch to include both jacks in angle calculization so we get accurate angles.
-* Fix my arduino to use a packets system instead of just sending to chars and delaying before recieving.
 * Put a pressure sensor on the jacks head so If the jack comes off the beam the program needs to know not to.
-
-* Everything else as of 2018 I wouldnt change as the research I have done its the best option. 
-
+* add encoders to verify the amount of movement accuring.
+* add code to stop system if jack is returning bad tilt data.
 
 ## Built With
 
 * Cmake
 * C++
-* Windows if using serial.
+* Arduino IDE
+* Linux for serial libaray
 
 ## Authors
 
 * Tyler J Roberts
 
 ## Code sources
-* Arduino website for serial is the bulk of my serial code.
+* Serial Libary by Geoffrey Hunter
 
