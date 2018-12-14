@@ -56,7 +56,7 @@ There is a issue with how im emulating angles that cause condictions to endlessl
 
 ## Full Ciruitry
 
-IMAGE
+![alt text](https://github.com/mcszymist/autoLevel/blob/master/Pictures/arduino.png)
 
 ## log
 
