@@ -79,6 +79,7 @@ bool House::bIsGood(){
 //false = unlevel, true = level
 bool House::checkLevel(){
 	for (auto i : jacks) {
+	    i->getSensor()->getAngles();
 		const double hold = fabs(i->getSensor()->getXAngle()) + fabs(i->getSensor()->getYAngle());
 		if (hold > (i->getSensor()->getPrecision()*2.5)) {
 			return false;

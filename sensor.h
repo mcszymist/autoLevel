@@ -1,5 +1,9 @@
 #ifndef SENSOR_H
 #define SENSOR_H
+#include <string>
+using std::string;
+#include <vector>
+using std::vector;
 #include <memory>
 using std::shared_ptr;
 #include "SerialPort.hpp"
@@ -24,5 +28,7 @@ public:
     const double getYAngle();
     void setAngles(const double &x,const double &y);
 	const double getPrecision();
+	void getAngles();
+    vector<int> parseRawData(const string &data);
 };
 #endif

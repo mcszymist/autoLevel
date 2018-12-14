@@ -20,6 +20,10 @@ void setup() {
   pinMode(49,OUTPUT);
   pinMode(53,OUTPUT);
   pinMode(47,OUTPUT);
+  pinMode(22,OUTPUT);
+  pinMode(A2,INPUT);
+  pinMode(A7,INPUT);
+  digitalWrite(22,HIGH);
   reset();
 }
 void parseData(){
@@ -136,26 +140,32 @@ int control(){
 }
 
 int getSensorX(int pin){
-  return analogRead("A"+pin);
+  digitalWrite(22,HIGH);
+  delay(50);
+  int storage = analogRead(A2);
+  digitalWrite(22,LOW);
+  return storage;
 }
 int getSensorY(int pin){
-  return analogRead("A"+pin);
+  return analogRead(A7);
 }
 
 //dum doesnt look at current to see if motor is stalled. Also doesnt take height into count yet.
 bool stepMotorUp(int pin){
   
   digitalWrite(pin,LOW);
-  delay(1000);
+  delay(2000);
   digitalWrite(pin,HIGH);
   return true;
 }
 bool stepMotorDown(int pin){
   digitalWrite(51,LOW);
   digitalWrite(53,LOW);
+  delay(500);
   digitalWrite(pin,LOW);
-  delay(1000);
+  delay(2000);
   digitalWrite(pin,HIGH);
+  delay(500);
   digitalWrite(51,HIGH);
   digitalWrite(53,HIGH);
   return true;

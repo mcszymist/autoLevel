@@ -25,10 +25,20 @@ cstdlib
 -
 cmath
 -
+iostream
+-
+sstream
+-
+vector
+-
 sensor.h
 /home/zym/Desktop/CS411/autoLevel/sensor.h
 
 /home/zym/Desktop/CS411/autoLevel/sensor.h
+string
+-
+vector
+-
 memory
 -
 SerialPort.hpp
