@@ -22,10 +22,10 @@ TEST_CASE("Serial Testing", "[Serial]"){
 TEST_CASE( "house basic test", "[baisc]" ) {
 
     House house;
-    house.addJack(40.0);		// bottom right
-    house.addJack(50.0);		// bottom left
-	house.addJack(50.0);		// top left
-	house.addJack(50.0);		// top right
+    house.addJack(40.0,1);		// bottom right
+    house.addJack(50.0,2);		// bottom left
+	house.addJack(50.0,3);		// top left
+	house.addJack(50.0,4);		// top right
 	auto saved = house.getJacks();
 	saved[0]->addAdjJack(saved[1],1);
 	saved[0]->addAdjJack(saved[3],10);
@@ -53,7 +53,7 @@ TEST_CASE( "house basic test", "[baisc]" ) {
 }
 TEST_CASE("sensorCheck", "[basic]") {
 	House house;
-	house.addJack(40.0);		// bottom right
+	house.addJack(40.0,1);		// bottom right
 	auto saved = house.getJacks();
 	saved[0]->makeSensor(10);
 	saved[0]->getSensor()->setAngles(10,10);
@@ -67,13 +67,13 @@ TEST_CASE("sensorCheck", "[basic]") {
 }
 TEST_CASE("jackAdjustment", "[basic]") {
 	House house;
-	house.addJack(100.0);		// bottom right
+	house.addJack(100.0,5);		// bottom right
 	auto saved = house.getJacks();
 	REQUIRE(saved[0]->raise() == false);
 	REQUIRE(saved[0]->lower());
 	REQUIRE(saved[0]->lower());
 	REQUIRE(saved[0]->raise() == true);
-	house.addJack(10.0);		// bottom right
+	house.addJack(10.0,6);		// bottom right
 	saved = house.getJacks();
 	REQUIRE(saved[1]->lower() == false);
 	REQUIRE(saved[1]->raise());
@@ -83,10 +83,10 @@ TEST_CASE("jackAdjustment", "[basic]") {
 }
 TEST_CASE("checklevel test", "[basic]") {
 	House house;
-	house.addJack(40.0);		// bottom right
-	house.addJack(50.0);		// bottom left
-	house.addJack(50.0);		// top left
-	house.addJack(50.0);		// top right
+	house.addJack(40.0,7);		// bottom right
+	house.addJack(50.0,8);		// bottom left
+	house.addJack(50.0,9);		// top left
+	house.addJack(50.0,1);		// top right
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -139,10 +139,10 @@ TEST_CASE("checklevel test", "[basic]") {
 }
 TEST_CASE("checklevel Emu_Test", "[Tester]") {
 	House house;
-	house.addJack(40.0);		// bottom right
-	house.addJack(50.0);		// bottom left
-	house.addJack(70.0);		// top left
-	house.addJack(20.0);		// top right
+	house.addJack(40.0,1);		// bottom right
+	house.addJack(50.0,2);		// bottom left
+	house.addJack(70.0,3);		// top left
+	house.addJack(20.0,4);		// top right
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -162,10 +162,10 @@ TEST_CASE("checklevel Emu_Test", "[Tester]") {
 }
 TEST_CASE("checklevel Emu_Test2", "[Tester]") {
 	House house;
-	house.addJack(50.0);		// bottom right
-	house.addJack(50.0);		// bottom left
-	house.addJack(50.0);		// top left
-	house.addJack(50.0);		// top right
+	house.addJack(50.0,1);		// bottom right
+	house.addJack(50.0,2);		// bottom left
+	house.addJack(50.0,3);		// top left
+	house.addJack(50.0,4);		// top right
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -193,10 +193,10 @@ TEST_CASE("checklevel Emu_Test2", "[Tester]") {
 }
 TEST_CASE("Emu_Test leveling four jack", "[Tester]") {
 	House house;
-	house.addJack(40.0);		// bottom right
-	house.addJack(45.0);		// bottom left
-	house.addJack(45.0);		// top left
-	house.addJack(50.0);		// top right
+	house.addJack(40.0,1);		// bottom right
+	house.addJack(45.0,2);		// bottom left
+	house.addJack(45.0,3);		// top left
+	house.addJack(50.0,4);		// top right
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -217,15 +217,15 @@ TEST_CASE("Emu_Test leveling four jack", "[Tester]") {
 }
 TEST_CASE("Emu_Test nine jack", "[Tester]") {
 	House house;
-	house.addJack(50.0);		// top left	0
-	house.addJack(50.0);		// mid left	1
-	house.addJack(50.0);		// bot left	2
-	house.addJack(50.0);		// top mid	3
-	house.addJack(50.0);		// mid mid	4
-	house.addJack(50.0);		// bot mid	5
-	house.addJack(50.0);		// top right6
-	house.addJack(50.0);		// mid right7
-	house.addJack(50.0);		// bot right8
+	house.addJack(50.0,1);		// top left	0
+	house.addJack(50.0,2);		// mid left	1
+	house.addJack(50.0,3);		// bot left	2
+	house.addJack(50.0,4);		// top mid	3
+	house.addJack(50.0,5);		// mid mid	4
+	house.addJack(50.0,6);		// bot mid	5
+	house.addJack(50.0,7);		// top right6
+	house.addJack(50.0,8);		// mid right7
+	house.addJack(50.0,9);		// bot right8
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -270,15 +270,15 @@ TEST_CASE("Emu_Test nine jack", "[Tester]") {
 }
 TEST_CASE("Emu_Test leveling nine jack", "[Tester]") {
 	House house;
-	house.addJack(30.0);		// top left	0
-	house.addJack(40.0);		// mid left	1
-	house.addJack(50.0);		// bot left	2
-	house.addJack(40.0);		// top mid	3
-	house.addJack(50.0);		// mid mid	4
-	house.addJack(60.0);		// bot mid	5
-	house.addJack(50.0);		// top right6
-	house.addJack(60.0);		// mid right7
-	house.addJack(70.0);		// bot right8
+	house.addJack(30.0,1);		// top left	0
+	house.addJack(40.0,2);		// mid left	1
+	house.addJack(50.0,3);		// bot left	2
+	house.addJack(40.0,4);		// top mid	3
+	house.addJack(50.0,5);		// mid mid	4
+	house.addJack(60.0,6);		// bot mid	5
+	house.addJack(50.0,7);		// top right6
+	house.addJack(60.0,8);		// mid right7
+	house.addJack(70.0,9);		// bot right8
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -323,15 +323,15 @@ TEST_CASE("Emu_Test leveling nine jack", "[Tester]") {
 }
 TEST_CASE("Emu_Test leveling nine jack min-max", "[Tester]") {
 	House house;
-	house.addJack(10.0);		// top left	0
-	house.addJack(10.0);		// mid left	1
-	house.addJack(10.0);		// bot left	2
-	house.addJack(10.0);		// top mid	3
-	house.addJack(10.0);		// mid mid	4
-	house.addJack(100.0);		// bot mid	5
-	house.addJack(100.0);		// top right6
-	house.addJack(100.0);		// mid right7
-	house.addJack(100.0);		// bot right8
+	house.addJack(10.0,1);		// top left	0
+	house.addJack(10.0,2);		// mid left	1
+	house.addJack(10.0,3);		// bot left	2
+	house.addJack(10.0,4);		// top mid	3
+	house.addJack(10.0,5);		// mid mid	4
+	house.addJack(100.0,6);		// bot mid	5
+	house.addJack(100.0,7);		// top right6
+	house.addJack(100.0,8);		// mid right7
+	house.addJack(100.0,9);		// bot right8
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -376,12 +376,12 @@ TEST_CASE("Emu_Test leveling nine jack min-max", "[Tester]") {
 }
 TEST_CASE("Emu_Test leveling six jack", "[Tester]") {
 	House house;
-	house.addJack(10.0);		// top left	0
-	house.addJack(10.0);		// bot left	1
-	house.addJack(10.0);		// top mid	2
-	house.addJack(100.0);		// bot mid	3
-	house.addJack(100.0);		// top right4
-	house.addJack(100.0);		// bot right5
+	house.addJack(10.0,1);		// top left	0
+	house.addJack(10.0,2);		// bot left	1
+	house.addJack(10.0,3);		// top mid	2
+	house.addJack(100.0,4);		// bot mid	3
+	house.addJack(100.0,5);		// top right4
+	house.addJack(100.0,6);		// bot right5
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
@@ -415,12 +415,12 @@ TEST_CASE("Emu_Test leveling six jack", "[Tester]") {
 
 TEST_CASE("Emu_Test leveling six jack alternating", "[Tester]") {
     House house;
-    house.addJack(20.0);		// top left	0
-    house.addJack(70.0);		// bot left	1
-    house.addJack(20.0);		// top mid	2
-    house.addJack(70.0);		// bot mid	3
-    house.addJack(20.0);		// top right4
-    house.addJack(70.0);		// bot right5
+    house.addJack(20.0,1);		// top left	0
+    house.addJack(70.0,2);		// bot left	1
+    house.addJack(20.0,3);		// top mid	2
+    house.addJack(70.0,4);		// bot mid	3
+    house.addJack(20.0,5);		// top right4
+    house.addJack(70.0,6);		// bot right5
     for (auto i : house.getJacks()) {
         i->makeSensor(10);
     }
@@ -453,15 +453,15 @@ TEST_CASE("Emu_Test leveling six jack alternating", "[Tester]") {
 }
 TEST_CASE("Emu_Test leveling nine jack alternating", "[Tester]") {
 	House house;
-	house.addJack(50.0);		// top left	0
-	house.addJack(70.0);		// mid left	1
-	house.addJack(50.0);		// bot left	2
-	house.addJack(70.0);		// top mid	3
-	house.addJack(50.0);		// mid mid	4
-	house.addJack(70.0);		// bot mid	5
-	house.addJack(50.0);		// top right6
-	house.addJack(70.0);		// mid right7
-	house.addJack(50.0);		// bot right8
+	house.addJack(50.0,1);		// top left	0
+	house.addJack(70.0,2);		// mid left	1
+	house.addJack(50.0,3);		// bot left	2
+	house.addJack(70.0,4);		// top mid	3
+	house.addJack(50.0,5);		// mid mid	4
+	house.addJack(70.0,6);		// bot mid	5
+	house.addJack(50.0,7);		// top right6
+	house.addJack(70.0,8);		// mid right7
+	house.addJack(50.0,9);		// bot right8
 	for (auto i : house.getJacks()) {
 		i->makeSensor(10);
 	}
