@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/zym/Desktop/CS411/autoLevel/SerialPort.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/SerialPort.cpp.o"
-  "/home/zym/Desktop/CS411/autoLevel/emu.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/emu.cpp.o"
-  "/home/zym/Desktop/CS411/autoLevel/house.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/house.cpp.o"
-  "/home/zym/Desktop/CS411/autoLevel/jack.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/jack.cpp.o"
-  "/home/zym/Desktop/CS411/autoLevel/main.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/main.cpp.o"
-  "/home/zym/Desktop/CS411/autoLevel/sensor.cpp" "/home/zym/Desktop/CS411/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/sensor.cpp.o"
+  "/home/trifecta/CLionProjects/autoLevel/SerialPort.cpp" "/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/SerialPort.cpp.o"
+  "/home/trifecta/CLionProjects/autoLevel/emu.cpp" "/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/emu.cpp.o"
+  "/home/trifecta/CLionProjects/autoLevel/house.cpp" "/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/house.cpp.o"
+  "/home/trifecta/CLionProjects/autoLevel/jack.cpp" "/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/jack.cpp.o"
+  "/home/trifecta/CLionProjects/autoLevel/main.cpp" "/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/main.cpp.o"
+  "/home/trifecta/CLionProjects/autoLevel/sensor.cpp" "/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir/sensor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
