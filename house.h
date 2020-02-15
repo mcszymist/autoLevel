@@ -21,7 +21,7 @@ using std::endl;
 
 class House{
 private:
-	//Emu emulation{};
+	Emu emulation{};
 
     bool workingOnPos = true;
 	int counterID = 0;
@@ -51,11 +51,11 @@ public:
     bool bIsGood();
 	//false = unlevel, true = level
     bool checkLevel();
-    /*
+
     void emuAngles(){
     	emulation.calculateAllAngles(jacks);
     };
-     */
+
     void printAllInfo(){
 		for(auto i : jacks){
 			cout << "Jack: " << i->getID() << endl;
@@ -63,6 +63,8 @@ public:
 			cout << "X: " << i->getSensor()->getXAngle() << ", Y: " << i->getSensor()->getYAngle() << endl;
 		}
     }
+    bool saveData();
+    bool loadData();
 	void levelOnce();
     void autoLevel();
 };
