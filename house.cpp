@@ -1,7 +1,84 @@
 #include "house.h"
+#include "sqlInterface.h"
 #include <cmath>
+#include <string>
+using std::string;
+using std::to_string;
 using std::fabs;
 //false is down, true is up
+bool House::loadData() {
+    sqlInterface db;
+    try {
+        db = sqlInterface();
+    }
+    catch (...) {
+        return false;
+    }
+    jacks.clear();
+    if (!db.execSQL("SELECT * FROM jacks ORDER BY id")) {
+        return false;
+    }
+    else {
+        auto table = db.getTable();
+        for (auto i : table) {
+            addJack(stoi(i[0]),stoi(i[1]));
+        }
+    }
+    if (!db.execSQL("SELECT * FROM adjacent ORDER BY jack_id")) {
+        return false;
+    }
+    else {
+        //need to clean up
+        auto table = db.getTable();
+        for (auto i : table) {
+            for (auto j : jacks) {
+                if (j->getID() == stoi(i[0])) {
+                    for (auto a : jacks) {
+                        if (a->getID() == stoi(i[1])) {
+                            j->addAdjJack(a,stoi(i[2]));
+                            continue;
+                        }
+                    }
+                    continue;
+                }
+            }
+        }
+    }
+    return true;
+};
+bool House::saveData() {
+    sqlInterface db;
+    try {
+        db = sqlInterface();
+    }
+    catch (...) {
+        return false;
+    }
+    db.execSQL("DROP TABLE jacks");
+    db.execSQL("DROP TABLE adjacent");
+    //create tables if needed
+    if (!db.execSQL("CREATE TABLE \"jacks\" (\"id\"	INTEGER NOT NULL UNIQUE, PRIMARY KEY(\"id\"))")) {
+        return false;
+    }
+    if (!db.execSQL("CREATE TABLE \"adjacent\" (\"jack_id\"	bigint NOT NULL, \"adjacent_id\" bigint NOT NULL, PRIMARY KEY(\"jack_id\", \"adjacent_id\"), CONSTRAINT \"fk_adjacent_key1\" FOREIGN KEY(\"jack_id\") REFERENCES \"jacks\"(\"id\") on delete cascade deferrable initially deferred, CONSTRAINT \"fk_adjacent_key2\" FOREIGN KEY(\"adjacent_id\") REFERENCES \"jacks\"(\"id\") deferrable initially deferred )")) {
+        return false;
+    }
+    //add jacks
+    for (auto i : jacks) {
+        if (!db.execSQL("INSERT INTO jacks(id) VALUES(" + to_string(i->getID()) + ")")) {
+            return false;
+        }
+    }
+    //add adjacents
+    for (auto i : jacks) {
+        for (auto ii : i->getList()) {
+            if (!db.execSQL("INSERT INTO adjacent (jack_id,adjacent_id) VALUES (" + to_string(i->getID()) + "," + to_string(ii.first->getID()) + ")")) {
+                return false;
+            }
+        }
+    }
+    return true;
+};
 void House::findRelations(){
     for(auto jack : jacks) {
         auto list = jack->getList();
