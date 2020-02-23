@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -g   CMakeFiles/autoLevelTest.dir/house.cpp.o CMakeFiles/autoLevelTest.dir/jack.cpp.o CMakeFiles/autoLevelTest.dir/emu.cpp.o CMakeFiles/autoLevelTest.dir/sensor.cpp.o CMakeFiles/autoLevelTest.dir/sqlite3.c.o CMakeFiles/autoLevelTest.dir/testsuite.cpp.o CMakeFiles/autoLevelTest.dir/SerialPortDummy.cpp.o  -o autoLevelTest -ldl 

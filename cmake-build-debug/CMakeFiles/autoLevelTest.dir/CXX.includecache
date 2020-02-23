@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/trifecta/CLionProjects/autoLevel/SerialPortDummy.cpp
+SerialPortDummy.h
+/home/trifecta/CLionProjects/autoLevel/SerialPortDummy.h
+string
+-
+
+/home/trifecta/CLionProjects/autoLevel/SerialPortDummy.h
+string
+-
+vector
+-
+

@@ -2,7 +2,13 @@
 
 #include "catch.hpp"
 #include "house.h"
+#if TESTING
+#include "SerialPortDummy.h"
+#else
 #include "SerialPort.hpp"
+#endif
+
+
 using namespace mn::CppLinuxSerial;
 
 TEST_CASE("Serial Testing", "[Serial]"){

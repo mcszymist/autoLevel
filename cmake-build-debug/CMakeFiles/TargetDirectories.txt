@@ -1,3 +1,4 @@
 /home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevel.dir
 /home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevelMain.dir
+/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/CMakeFiles/autoLevelTest.dir

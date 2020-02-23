@@ -1,7 +1,11 @@
 #ifndef HOUSE_H
 #define HOUSE_H
 
+#if TESTING
+#include "SerialPortDummy.h"
+#else
 #include "SerialPort.hpp"
+#endif
 using namespace mn::CppLinuxSerial;
 
 #include <vector>
@@ -31,10 +35,12 @@ private:
 public:
 
     House(){
-        serial = std::make_shared<SerialPort>("/dev/ttyACM0",BaudRate::B_115200);
+
+        serial = std::make_shared<SerialPort>("/dev/ttyACM0", BaudRate::B_115200);
         serial->Open();
         auto store = serial->recvWithStartEndMarkers();
         cout << store << endl;
+
     }
 	//false is down, true is up
 	void findRelations();

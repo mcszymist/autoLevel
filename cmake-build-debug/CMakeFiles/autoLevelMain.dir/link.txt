@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -g   CMakeFiles/autoLevelMain.dir/house.cpp.o CMakeFiles/autoLevelMain.dir/jack.cpp.o CMakeFiles/autoLevelMain.dir/emu.cpp.o CMakeFiles/autoLevelMain.dir/sensor.cpp.o CMakeFiles/autoLevelMain.dir/SerialPort.cpp.o CMakeFiles/autoLevelMain.dir/main.cpp.o CMakeFiles/autoLevelMain.dir/sqlite3.c.o  -o autoLevelMain -ldl 

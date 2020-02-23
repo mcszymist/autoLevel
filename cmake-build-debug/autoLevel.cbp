@@ -27,54 +27,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="autoLevel">
-				<Option output="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/autoLevel" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/trifecta/CLionProjects/autoLevel/."/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 autoLevel"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="autoLevel/fast">
-				<Option output="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/autoLevel" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/trifecta/CLionProjects/autoLevel/."/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 autoLevel/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
 				<Option type="4"/>
@@ -85,45 +37,180 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="autoLevelMain">
+				<Option output="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/autoLevelMain" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTESTING=0"/>
+					<Add directory="/home/trifecta/CLionProjects/autoLevel/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 autoLevelMain"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autoLevelMain/fast">
+				<Option output="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/autoLevelMain" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTESTING=0"/>
+					<Add directory="/home/trifecta/CLionProjects/autoLevel/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 autoLevelMain/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autoLevelTest">
+				<Option output="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/autoLevelTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTESTING=1"/>
+					<Add directory="/home/trifecta/CLionProjects/autoLevel/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 autoLevelTest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="autoLevelTest/fast">
+				<Option output="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/autoLevelTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/trifecta/CLionProjects/autoLevel/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTESTING=1"/>
+					<Add directory="/home/trifecta/CLionProjects/autoLevel/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 autoLevelTest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/trifecta/CLionProjects/autoLevel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/Exception.hpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/SerialPort.cpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/SerialPort.hpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/SerialPortDummy.cpp">
+			<Option target="autoLevelTest"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/SerialPortDummy.h">
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/catch.hpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/emu.cpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/emu.h">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/house.cpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/house.h">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/jack.cpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/jack.h">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/main.cpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/sensor.cpp">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/sensor.h">
-			<Option target="autoLevel"/>
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/sqlInterface.h">
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/sqlite3.c">
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/sqlite3.h">
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/sqlite3ext.h">
+			<Option target="autoLevelMain"/>
+			<Option target="autoLevelTest"/>
+		</Unit>
+		<Unit filename="/home/trifecta/CLionProjects/autoLevel/testsuite.cpp">
+			<Option target="autoLevelTest"/>
 		</Unit>
 		<Unit filename="/home/trifecta/CLionProjects/autoLevel/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

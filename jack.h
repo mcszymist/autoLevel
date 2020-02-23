@@ -9,7 +9,12 @@ using std::make_shared;
 
 #include <utility>
 using std::pair;
+
+#if TESTING
+#include "SerialPortDummy.h"
+#else
 #include "SerialPort.hpp"
+#endif
 using namespace mn::CppLinuxSerial;
 //ScrewJack motorized
 

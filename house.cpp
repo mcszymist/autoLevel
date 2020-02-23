@@ -79,6 +79,8 @@ bool House::saveData() {
     }
     return true;
 };
+
+//false is down, true is up
 void House::findRelations(){
     for(auto jack : jacks) {
         auto list = jack->getList();
@@ -155,14 +157,23 @@ bool House::bIsGood(){
 }
 //false = unlevel, true = level
 bool House::checkLevel(){
-	for (auto i : jacks) {
-	    i->getSensor()->getAngles();
-		const double hold = fabs(i->getSensor()->getXAngle()) + fabs(i->getSensor()->getYAngle());
-		if (hold > (i->getSensor()->getPrecision()*2.5)) {
-			return false;
-		}
-	}
-	return true;
+
+#if TESTING
+    emuAngles();
+#endif
+    for (auto i : jacks) {
+
+#if TESTING
+
+#else
+        i->getSensor()->getAngles();
+#endif
+        const double hold = fabs(i->getSensor()->getXAngle()) + fabs(i->getSensor()->getYAngle());
+        if (hold > (i->getSensor()->getPrecision()*2.5)) {
+            return false;
+        }
+    }
+    return true;
 }
 void House::levelOnce(){
     if(checkLevel()){
@@ -174,8 +185,8 @@ void House::levelOnce(){
     //emuAngles();
     return;
 }
-void House::autoLevel(){
-    while(!checkLevel()){
+void House::autoLevel() {
+    while (!checkLevel()) {
         levelOnce();
     }
 }

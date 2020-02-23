@@ -2,7 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="autoLevel" targetName="autoLevel" />
+      <config projectName="autoLevel" targetName="autoLevelTest" />
+      <config projectName="autoLevel" targetName="autoLevelMain" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -12,43 +13,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bab526ca-4d64-4651-a4ea-1616a0f0c2ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerialPortDummy.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SerialPortDummy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/SerialPort.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/SerialPort.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/emu.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/emu.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/house.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/house.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/jack.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/jack.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/sensor.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/sensor.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/autoLevel.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/autoLevel" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/autoLevel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/autoLevel" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/autoLevel.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/autoLevel.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/house.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/house.h" beforeDir="false" afterPath="$PROJECT_DIR$/house.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jack.h" beforeDir="false" afterPath="$PROJECT_DIR$/jack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/sensor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testsuite.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +49,20 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
@@ -135,15 +141,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/emu.cpp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug/autoLevelTest" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager" selected="CMake Application.Build All">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autoLevel" RUN_TARGET_NAME="autoLevel" EXPLICIT_BUILD_TARGET_NAME="all">
+  <component name="RunManager" selected="CMake Application.autoLevelTest">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$PROJECT_DIR$/cmake-build-debug/autoLevelTest" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -153,7 +160,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="autoLevel" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autoLevel" TARGET_NAME="autoLevel" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autoLevel" RUN_TARGET_NAME="autoLevel">
+    <configuration name="autoLevelMain" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autoLevel" TARGET_NAME="autoLevelMain" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autoLevel" RUN_TARGET_NAME="autoLevelMain">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="autoLevelTest" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="autoLevel" TARGET_NAME="autoLevelTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="autoLevel" RUN_TARGET_NAME="autoLevelTest">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -169,7 +181,8 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.Build All" />
-      <item itemvalue="CMake Application.autoLevel" />
+      <item itemvalue="CMake Application.autoLevelMain" />
+      <item itemvalue="CMake Application.autoLevelTest" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -197,7 +210,9 @@
       <workItem from="1543873199630" duration="12000" />
       <workItem from="1543970249214" duration="2932000" />
       <workItem from="1544032192284" duration="3797000" />
-      <workItem from="1581739067518" duration="40000" />
+      <workItem from="1581739067518" duration="1658000" />
+      <workItem from="1581766584847" duration="3533000" />
+      <workItem from="1582490084208" duration="3178000" />
     </task>
     <servers />
   </component>
@@ -222,14 +237,62 @@
       <screen x="67" y="27" width="1853" height="1413" />
     </state>
     <state x="633" y="275" width="642" height="553" key="#Build_All/67.27.1853.1413@67.27.1853.1413" timestamp="1581739106725" />
+    <state x="459" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582490949735">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state x="459" y="354" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1413@67.27.1853.1413" timestamp="1582490949735" />
+    <state x="817" y="320" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581769433130">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state x="817" y="320" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1413@67.27.1853.1413" timestamp="1581769433130" />
+    <state width="1354" height="259" key="GridCell.Tab.0.bottom" timestamp="1582493161395">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="259" key="GridCell.Tab.0.bottom/67.27.1853.1413@67.27.1853.1413" timestamp="1582493161395" />
+    <state width="1354" height="259" key="GridCell.Tab.0.center" timestamp="1582493161394">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="259" key="GridCell.Tab.0.center/67.27.1853.1413@67.27.1853.1413" timestamp="1582493161394" />
+    <state width="1354" height="259" key="GridCell.Tab.0.left" timestamp="1582493161393">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="259" key="GridCell.Tab.0.left/67.27.1853.1413@67.27.1853.1413" timestamp="1582493161393" />
+    <state width="1354" height="259" key="GridCell.Tab.0.right" timestamp="1582493161395">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="259" key="GridCell.Tab.0.right/67.27.1853.1413@67.27.1853.1413" timestamp="1582493161395" />
+    <state width="1354" height="319" key="GridCell.Tab.1.bottom" timestamp="1582493017025">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="319" key="GridCell.Tab.1.bottom/67.27.1853.1413@67.27.1853.1413" timestamp="1582493017025" />
+    <state width="1354" height="319" key="GridCell.Tab.1.center" timestamp="1582493017024">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="319" key="GridCell.Tab.1.center/67.27.1853.1413@67.27.1853.1413" timestamp="1582493017024" />
+    <state width="1354" height="319" key="GridCell.Tab.1.left" timestamp="1582493017024">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="319" key="GridCell.Tab.1.left/67.27.1853.1413@67.27.1853.1413" timestamp="1582493017024" />
+    <state width="1354" height="319" key="GridCell.Tab.1.right" timestamp="1582493017024">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state width="1354" height="319" key="GridCell.Tab.1.right/67.27.1853.1413@67.27.1853.1413" timestamp="1582493017024" />
+    <state x="615" y="379" key="com.intellij.ide.util.TipDialog" timestamp="1582490085051">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state x="615" y="379" key="com.intellij.ide.util.TipDialog/67.27.1853.1413@67.27.1853.1413" timestamp="1582490085051" />
+    <state x="1119" y="347" width="672" height="678" key="search.everywhere.popup" timestamp="1581769110553">
+      <screen x="67" y="27" width="1853" height="1413" />
+    </state>
+    <state x="1119" y="347" width="672" height="678" key="search.everywhere.popup/67.27.1853.1413@67.27.1853.1413" timestamp="1581769110553" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/house.cpp</url>
-          <line>101</line>
-          <option name="timeStamp" value="3" />
+          <line>139</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

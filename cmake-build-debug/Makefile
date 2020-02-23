@@ -111,17 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named autoLevel
+# Target rules for targets named autoLevelMain
 
 # Build rule for target.
-autoLevel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 autoLevel
-.PHONY : autoLevel
+autoLevelMain: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 autoLevelMain
+.PHONY : autoLevelMain
 
 # fast build rule for target.
-autoLevel/fast:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/build
-.PHONY : autoLevel/fast
+autoLevelMain/fast:
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/build
+.PHONY : autoLevelMain/fast
+
+#=============================================================================
+# Target rules for targets named autoLevelTest
+
+# Build rule for target.
+autoLevelTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 autoLevelTest
+.PHONY : autoLevelTest
+
+# fast build rule for target.
+autoLevelTest/fast:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/build
+.PHONY : autoLevelTest/fast
 
 SerialPort.o: SerialPort.cpp.o
 
@@ -129,7 +142,7 @@ SerialPort.o: SerialPort.cpp.o
 
 # target to build an object file
 SerialPort.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/SerialPort.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/SerialPort.cpp.o
 .PHONY : SerialPort.cpp.o
 
 SerialPort.i: SerialPort.cpp.i
@@ -138,7 +151,7 @@ SerialPort.i: SerialPort.cpp.i
 
 # target to preprocess a source file
 SerialPort.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/SerialPort.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/SerialPort.cpp.i
 .PHONY : SerialPort.cpp.i
 
 SerialPort.s: SerialPort.cpp.s
@@ -147,8 +160,35 @@ SerialPort.s: SerialPort.cpp.s
 
 # target to generate assembly for a file
 SerialPort.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/SerialPort.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/SerialPort.cpp.s
 .PHONY : SerialPort.cpp.s
+
+SerialPortDummy.o: SerialPortDummy.cpp.o
+
+.PHONY : SerialPortDummy.o
+
+# target to build an object file
+SerialPortDummy.cpp.o:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/SerialPortDummy.cpp.o
+.PHONY : SerialPortDummy.cpp.o
+
+SerialPortDummy.i: SerialPortDummy.cpp.i
+
+.PHONY : SerialPortDummy.i
+
+# target to preprocess a source file
+SerialPortDummy.cpp.i:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/SerialPortDummy.cpp.i
+.PHONY : SerialPortDummy.cpp.i
+
+SerialPortDummy.s: SerialPortDummy.cpp.s
+
+.PHONY : SerialPortDummy.s
+
+# target to generate assembly for a file
+SerialPortDummy.cpp.s:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/SerialPortDummy.cpp.s
+.PHONY : SerialPortDummy.cpp.s
 
 emu.o: emu.cpp.o
 
@@ -156,7 +196,8 @@ emu.o: emu.cpp.o
 
 # target to build an object file
 emu.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/emu.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/emu.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/emu.cpp.o
 .PHONY : emu.cpp.o
 
 emu.i: emu.cpp.i
@@ -165,7 +206,8 @@ emu.i: emu.cpp.i
 
 # target to preprocess a source file
 emu.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/emu.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/emu.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/emu.cpp.i
 .PHONY : emu.cpp.i
 
 emu.s: emu.cpp.s
@@ -174,7 +216,8 @@ emu.s: emu.cpp.s
 
 # target to generate assembly for a file
 emu.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/emu.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/emu.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/emu.cpp.s
 .PHONY : emu.cpp.s
 
 house.o: house.cpp.o
@@ -183,7 +226,8 @@ house.o: house.cpp.o
 
 # target to build an object file
 house.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/house.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/house.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/house.cpp.o
 .PHONY : house.cpp.o
 
 house.i: house.cpp.i
@@ -192,7 +236,8 @@ house.i: house.cpp.i
 
 # target to preprocess a source file
 house.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/house.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/house.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/house.cpp.i
 .PHONY : house.cpp.i
 
 house.s: house.cpp.s
@@ -201,7 +246,8 @@ house.s: house.cpp.s
 
 # target to generate assembly for a file
 house.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/house.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/house.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/house.cpp.s
 .PHONY : house.cpp.s
 
 jack.o: jack.cpp.o
@@ -210,7 +256,8 @@ jack.o: jack.cpp.o
 
 # target to build an object file
 jack.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/jack.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/jack.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/jack.cpp.o
 .PHONY : jack.cpp.o
 
 jack.i: jack.cpp.i
@@ -219,7 +266,8 @@ jack.i: jack.cpp.i
 
 # target to preprocess a source file
 jack.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/jack.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/jack.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/jack.cpp.i
 .PHONY : jack.cpp.i
 
 jack.s: jack.cpp.s
@@ -228,7 +276,8 @@ jack.s: jack.cpp.s
 
 # target to generate assembly for a file
 jack.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/jack.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/jack.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/jack.cpp.s
 .PHONY : jack.cpp.s
 
 main.o: main.cpp.o
@@ -237,7 +286,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -246,7 +295,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -255,7 +304,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 sensor.o: sensor.cpp.o
@@ -264,7 +313,8 @@ sensor.o: sensor.cpp.o
 
 # target to build an object file
 sensor.cpp.o:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/sensor.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/sensor.cpp.o
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/sensor.cpp.o
 .PHONY : sensor.cpp.o
 
 sensor.i: sensor.cpp.i
@@ -273,7 +323,8 @@ sensor.i: sensor.cpp.i
 
 # target to preprocess a source file
 sensor.cpp.i:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/sensor.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/sensor.cpp.i
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/sensor.cpp.i
 .PHONY : sensor.cpp.i
 
 sensor.s: sensor.cpp.s
@@ -282,8 +333,66 @@ sensor.s: sensor.cpp.s
 
 # target to generate assembly for a file
 sensor.cpp.s:
-	$(MAKE) -f CMakeFiles/autoLevel.dir/build.make CMakeFiles/autoLevel.dir/sensor.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/sensor.cpp.s
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/sensor.cpp.s
 .PHONY : sensor.cpp.s
+
+sqlite3.o: sqlite3.c.o
+
+.PHONY : sqlite3.o
+
+# target to build an object file
+sqlite3.c.o:
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/sqlite3.c.o
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/sqlite3.c.o
+.PHONY : sqlite3.c.o
+
+sqlite3.i: sqlite3.c.i
+
+.PHONY : sqlite3.i
+
+# target to preprocess a source file
+sqlite3.c.i:
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/sqlite3.c.i
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/sqlite3.c.i
+.PHONY : sqlite3.c.i
+
+sqlite3.s: sqlite3.c.s
+
+.PHONY : sqlite3.s
+
+# target to generate assembly for a file
+sqlite3.c.s:
+	$(MAKE) -f CMakeFiles/autoLevelMain.dir/build.make CMakeFiles/autoLevelMain.dir/sqlite3.c.s
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/sqlite3.c.s
+.PHONY : sqlite3.c.s
+
+testsuite.o: testsuite.cpp.o
+
+.PHONY : testsuite.o
+
+# target to build an object file
+testsuite.cpp.o:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/testsuite.cpp.o
+.PHONY : testsuite.cpp.o
+
+testsuite.i: testsuite.cpp.i
+
+.PHONY : testsuite.i
+
+# target to preprocess a source file
+testsuite.cpp.i:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/testsuite.cpp.i
+.PHONY : testsuite.cpp.i
+
+testsuite.s: testsuite.cpp.s
+
+.PHONY : testsuite.s
+
+# target to generate assembly for a file
+testsuite.cpp.s:
+	$(MAKE) -f CMakeFiles/autoLevelTest.dir/build.make CMakeFiles/autoLevelTest.dir/testsuite.cpp.s
+.PHONY : testsuite.cpp.s
 
 # Help Target
 help:
@@ -292,11 +401,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... autoLevel"
 	@echo "... edit_cache"
+	@echo "... autoLevelMain"
+	@echo "... autoLevelTest"
 	@echo "... SerialPort.o"
 	@echo "... SerialPort.i"
 	@echo "... SerialPort.s"
+	@echo "... SerialPortDummy.o"
+	@echo "... SerialPortDummy.i"
+	@echo "... SerialPortDummy.s"
 	@echo "... emu.o"
 	@echo "... emu.i"
 	@echo "... emu.s"
@@ -312,6 +425,12 @@ help:
 	@echo "... sensor.o"
 	@echo "... sensor.i"
 	@echo "... sensor.s"
+	@echo "... sqlite3.o"
+	@echo "... sqlite3.i"
+	@echo "... sqlite3.s"
+	@echo "... testsuite.o"
+	@echo "... testsuite.i"
+	@echo "... testsuite.s"
 .PHONY : help
 
 

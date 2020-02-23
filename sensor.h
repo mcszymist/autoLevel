@@ -6,9 +6,12 @@ using std::string;
 using std::vector;
 #include <memory>
 using std::shared_ptr;
-#include "SerialPort.hpp"
 
+#if TESTING
+#include "SerialPortDummy.h"
+#else
 #include "SerialPort.hpp"
+#endif
 using namespace mn::CppLinuxSerial;
 //Sensor SCA100T-D02
 class Sensor{
